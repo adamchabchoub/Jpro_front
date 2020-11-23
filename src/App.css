@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+.navScroll-enter {
+    background-color:  rgba(127, 127, 136, 0.9);
+    padding-top: 0 !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navScroll-enter-active {
+    background-color: transparent;
+    padding-top: 1.5% !important;
+    transition: background-color 500ms, padding-top 500ms !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.navScroll-enter-done {
+    background-color: transparent;
+    padding-top: 1.5% !important;
+}
+
+.navScroll-exit {
+    background-color: transparent;
+    padding-top: 1.5% !important;
+}
+
+.navScroll-exit-active {
+    background-color:  rgba(127, 127, 136, 0.9);
+    transition: background-color 500ms, padding-top 500ms !important;
+    padding-top: 0 !important;
+}
+
+.navScroll-exit-done {
+    background-color: rgba(127, 127, 136, 0.9);
+    padding-top: 0 !important;
+}
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    padding-top: 1.5%;
+    z-index: 2;
+}
+
+.title {
+    padding-top: 15%;
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Playfair Display', serif;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+    /* background-color: red; */
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height:45vh;
+    box-shadow: 0 0 10px rgba(33,33,33,.2); 
+}
+
+.box:hover {
+    box-shadow: 0 0 50px rgba(33,33,33,.2); 
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
