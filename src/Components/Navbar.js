@@ -58,7 +58,7 @@ export default function Navbar(props) {
           setScroll(window.pageYOffset);
       }
       window.addEventListener('scroll', updatePosition);
-      if (scroll>0) setIsTransparent(false)
+      if (scroll>10) setIsTransparent(false)
       else setIsTransparent(true);
       return () => window.removeEventListener('scroll', updatePosition);
   }, [scroll]);
