@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react';
 import Navbar from './Navbar';
 import BusinessMeeting from '../Assets/BusinessMeeting.jpeg'
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import { useMediaQuery } from 'react-responsive';
 import Button from '@material-ui/core/Button';
+import { useMediaQuery } from 'react-responsive';
 
 
 
@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "10%",
     borderRadius: "3vh"
   },
-  formTextField:{
+  formTextField: {
     marginLeft: "10%",
     marginTop: "2%",
   },
@@ -78,7 +78,7 @@ export default function Contact() {
         <Navbar />
         <br />
         <div className={classes.formContainer} style={{ width: "45vw" }}>
-          <h1 className={classes.title} style={{fontSize: "3.5vw"}}>Contactez nous</h1>
+          <h1 className={classes.title} style={{ fontSize: "3.5vw" }}>Contactez nous</h1>
           <form>
             <div className="form-row">
 
@@ -88,7 +88,7 @@ export default function Contact() {
                 variant="outlined"
                 color="primary"
                 className={classes.formTextField}
-                style={{width: "32vw"}}
+                style={{ width: "32vw" }}
 
               />
             </div>
@@ -99,7 +99,7 @@ export default function Contact() {
                 variant="outlined"
                 color="primary"
                 className={classes.formTextField}
-                style={{width: "32vw"}}
+                style={{ width: "32vw" }}
               />
             </div>
             <div className="form-row">
@@ -109,7 +109,7 @@ export default function Contact() {
                 variant="outlined"
                 color="primary"
                 className={classes.formTextField}
-                style={{width: "32vw"}}
+                style={{ width: "32vw" }}
               />
             </div>
 
@@ -120,7 +120,7 @@ export default function Contact() {
                 variant="outlined"
                 color="primary"
                 className={classes.formTextField}
-                style={{width: "32vw"}}
+                style={{ width: "32vw" }}
               />
             </div>
             <div className="form-row">
@@ -131,7 +131,7 @@ export default function Contact() {
                 rows={4}
                 variant="outlined"
                 className={classes.formTextField}
-                style={{width: "32vw"}}
+                style={{ width: "32vw" }}
               />
             </div>
             <div className="form-row">
@@ -148,86 +148,13 @@ export default function Contact() {
       </Desktop>
 
 
-      <Mobile>
-        <div className={classes.container} style={{ backgroundSize: "320%" }}>
-        </div>
-        <Navbar />
-        <br />
-        <div className={classes.formContainer} style={{ width: "85vw" }}>
-          <h1 className={classes.title} style={{fontSize: "4.8vw"}}>Contactez nous</h1>
-          <form>
-            <div className="form-row">
-              <TextField
-                id="outlined-secondary"
-                label="Nom et Prénom"
-                variant="outlined"
-                color="primary"
-                className={classes.formTextField}
-                style={{width: "65vw"}}
-              />
-            </div>
-            <div className="form-row">
-              <TextField
-                id="outlined-secondary"
-                label="Nom de la société"
-                variant="outlined"
-                color="primary"
-                className={classes.formTextField}
-                style={{width: "65vw"}}
-              />
-            </div>
-            <div className="form-row">
-              <TextField
-                id="outlined-secondary"
-                label="Email"
-                variant="outlined"
-                color="primary"
-                className={classes.formTextField}
-                style={{width: "65vw"}}
-              />
-            </div>
-            <div className="form-row">
-              <TextField
-                id="outlined-secondary"
-                label="Téléphone"
-                variant="outlined"
-                color="primary"
-                className={classes.formTextField}
-                style={{width: "65vw"}}
-              />
-            </div>
-            <div className="form-row">
-              <TextField
-                id="outlined-multiline-static"
-                label=" Décrire Votre Besoin"
-                multiline
-                rows={4}
-                variant="outlined"
-                className={classes.formTextField}
-                style={{width: "65vw"}}
-              />
-            </div>
-            <div className="form-row">
-              <Button
-                variant="contained"
-                color="primary"
-                className={classes.button}
-              >
-                Envoyer
-            </Button>
-            </div>
-          </form>
-        </div>
-      </Mobile>
-     
-     
       <Tablet>
         <div className={classes.container} style={{ backgroundSize: "150%", }}>
         </div>
         <Navbar />
         <br />
         <div className={classes.formContainer} style={{ width: "70vw" }}>
-          <h1 className={classes.title} style={{fontSize: "3.8vw"}}>Contactez nous</h1>
+          <h1 className={classes.title} style={{ fontSize: "3.8vw" }}>Contactez nous</h1>
           <form>
             <div className="form-row">
               <TextField
@@ -236,7 +163,7 @@ export default function Contact() {
                 variant="outlined"
                 color="primary"
                 className={classes.formTextField}
-                style={{width: "50vw"}}
+                style={{ width: "50vw" }}
               />
             </div>
             <div className="form-row">
@@ -246,7 +173,7 @@ export default function Contact() {
                 variant="outlined"
                 color="primary"
                 className={classes.formTextField}
-                style={{width: "50vw"}}
+                style={{ width: "50vw" }}
               />
             </div>
             <div className="form-row">
@@ -256,7 +183,7 @@ export default function Contact() {
                 variant="outlined"
                 color="primary"
                 className={classes.formTextField}
-                style={{width: "50vw"}}
+                style={{ width: "50vw" }}
               />
             </div>
             <div className="form-row">
@@ -266,7 +193,7 @@ export default function Contact() {
                 variant="outlined"
                 color="primary"
                 className={classes.formTextField}
-                style={{width: "50vw"}}
+                style={{ width: "50vw" }}
               />
             </div>
             <div className="form-row">
@@ -277,7 +204,7 @@ export default function Contact() {
                 rows={4}
                 variant="outlined"
                 className={classes.formTextField}
-                style={{width: "50vw"}}
+                style={{ width: "50vw" }}
               />
             </div>
             <div className="form-row">
@@ -287,11 +214,85 @@ export default function Contact() {
                 className={classes.button}
               >
                 Envoyer
-            </Button>
+                </Button>
             </div>
           </form>
         </div>
       </Tablet>
+
+
+      <Mobile>
+        <div className={classes.container} style={{ backgroundSize: "320%" }}>
+        </div>
+        <Navbar />
+        <br />
+        <div className={classes.formContainer} style={{ width: "85vw" }}>
+          <h1 className={classes.title} style={{ fontSize: "4.8vw" }}>Contactez nous</h1>
+          <form>
+            <div className="form-row">
+              <TextField
+                id="outlined-secondary"
+                label="Nom et Prénom"
+                variant="outlined"
+                color="primary"
+                className={classes.formTextField}
+                style={{ width: "65vw" }}
+              />
+            </div>
+            <div className="form-row">
+              <TextField
+                id="outlined-secondary"
+                label="Nom de la société"
+                variant="outlined"
+                color="primary"
+                className={classes.formTextField}
+                style={{ width: "65vw" }}
+              />
+            </div>
+            <div className="form-row">
+              <TextField
+                id="outlined-secondary"
+                label="Email"
+                variant="outlined"
+                color="primary"
+                className={classes.formTextField}
+                style={{ width: "65vw" }}
+              />
+            </div>
+            <div className="form-row">
+              <TextField
+                id="outlined-secondary"
+                label="Téléphone"
+                variant="outlined"
+                color="primary"
+                className={classes.formTextField}
+                style={{ width: "65vw" }}
+              />
+            </div>
+            <div className="form-row">
+              <TextField
+                id="outlined-multiline-static"
+                label=" Décrire Votre Besoin"
+                multiline
+                rows={4}
+                variant="outlined"
+                className={classes.formTextField}
+                style={{ width: "65vw" }}
+              />
+            </div>
+            <div className="form-row">
+              <Button
+                variant="contained"
+                color="primary"
+                className={classes.button}
+              >
+                Envoyer
+                  </Button>
+            </div>
+          </form>
+        </div>
+      </Mobile>
+
     </div>
   )
 }
