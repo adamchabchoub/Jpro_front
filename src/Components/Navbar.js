@@ -10,16 +10,14 @@ import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import Button from '@material-ui/core/Button';
-// import grey from '@material-ui/core/colors/grey';
 import { ThemeProvider } from '@material-ui/styles';
 import '../App.css';
 import { CSSTransition } from 'react-transition-group';
 
-
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: "#fff",
+      main: "#ffffff",
     },
   },
 });
@@ -121,7 +119,7 @@ export default function Navbar(props) {
           aria-label="account of current user"
           aria-controls="primary-search-account-menu"
           aria-haspopup="true"
-          color="primary"
+          style={{color:"white"}}
         >
           <AccountCircle />
         </IconButton>
@@ -132,7 +130,7 @@ export default function Navbar(props) {
           aria-label="account of current user"
           aria-controls="primary-search-account-menu"
           aria-haspopup="true"
-          color="primary"
+          style={{color:"white"}}
         >
           <AccountCircle />
         </IconButton>
@@ -143,14 +141,14 @@ export default function Navbar(props) {
           aria-label="account of current user"
           aria-controls="primary-search-account-menu"
           aria-haspopup="true"
-          color="primary"
+          style={{color:"white"}}
         >
           <AccountCircle />
         </IconButton>
         <p>A propos</p>
       </MenuItem>
       <MenuItem>
-        <IconButton aria-label="show 4 new mails" color="primary">
+        <IconButton aria-label="show 4 new mails" style={{color:"white"}}>
           <Badge badgeContent={4} color="secondary">
             <MailIcon />
           </Badge>
@@ -158,7 +156,7 @@ export default function Navbar(props) {
         <p>Messages</p>
       </MenuItem>
       <MenuItem>
-        <IconButton aria-label="show 11 new notifications" color="primary">
+        <IconButton aria-label="show 11 new notifications" style={{color:"white"}}>
           <Badge badgeContent={11} color="secondary">
             <NotificationsIcon />
           </Badge>
@@ -170,8 +168,8 @@ export default function Navbar(props) {
           aria-label="account of current user"
           aria-controls="primary-search-account-menu"
           aria-haspopup="true"
-          color="primary"
-        >
+          style={{color:"white"}}
+                  >
           <AccountCircle />
         </IconButton>
         <p>Profile</p>
@@ -189,20 +187,20 @@ export default function Navbar(props) {
       >
       <div className="navbar">
           <Toolbar>
-            <Button color="primary">Home</Button>
+            <Button style={{color:"white"}}>Home</Button>
             <div className={classes.sectionDesktopRight}>
-              <Button color="primary">Revendeur</Button>
-              <Button color="primary">Contact</Button>
-              <Button color="primary">About</Button>
+              <Button style={{color:"white"}}>Revendeur</Button>
+              <Button style={{color:"white"}}>Contact</Button>
+              <Button style={{color:"white"}}>About</Button>
             </div>
             <div className={classes.grow} />
             <div className={classes.sectionDesktopLeft}>
-              <IconButton aria-label="show 4 new mails" color="primary">
+              <IconButton aria-label="show 4 new mails" style={{color:"white"}}>
                 <Badge badgeContent={4} color="secondary">
                   <MailIcon />
                 </Badge>
               </IconButton>
-              <IconButton aria-label="show 17 new notifications" color="primary">
+              <IconButton aria-label="show 17 new notifications" style={{color:"white"}}>
                 <Badge badgeContent={17} color="secondary">
                   <NotificationsIcon />
                 </Badge>
@@ -213,7 +211,7 @@ export default function Navbar(props) {
                 aria-controls={menuId}
                 aria-haspopup="true"
                 onClick={handleProfileMenuOpen}
-                color="primary"
+                style={{color:"white"}}
               >
                 <AccountCircle />
               </IconButton>
@@ -224,7 +222,7 @@ export default function Navbar(props) {
                 aria-controls={mobileMenuId}
                 aria-haspopup="true"
                 onClick={handleMobileMenuOpen}
-                color="primary"
+                style={{color:"white"}}
               >
                 <MoreIcon />
               </IconButton>
