@@ -172,7 +172,6 @@ export default function Contact() {
                             <FormControlLabel label="Demander l'ajout d'une fonctionalité" control={<Radio color="primary" />} value="fonctionalité" />
                             <FormControlLabel label="Demander une formation" control={<Radio color="primary" />} value="formation" />
                             <FormControlLabel label="Demander de l'assistance" control={<Radio color="primary" />} value="assistance" />
-                            <FormControlLabel label="Acheter" control={<Radio color="primary" />} value="acheter" />
                         </RadioGroup>
                         <div className="form-row">
                             <TextField
