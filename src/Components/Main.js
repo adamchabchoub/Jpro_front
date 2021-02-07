@@ -21,6 +21,13 @@ export default function Main() {
     const updateShowTxt = () => {
         setShowTxt(true)
     }
+    let stateCheck = setInterval(() => {
+        if (document.readyState !== 'loading') {
+            setShowTxt(true);
+            clearInterval(stateCheck);
+        }
+    }, 100);
+
     useEffect(() => {
         window.addEventListener("load", updateShowTxt)
         return () => window.removeEventListener("load", updateShowTxt)

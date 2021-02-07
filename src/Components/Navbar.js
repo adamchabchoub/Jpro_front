@@ -10,9 +10,11 @@ import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import Button from '@material-ui/core/Button';
+import Link from '@material-ui/core/Link';
 import { ThemeProvider } from '@material-ui/styles';
 import '../App.css';
 import { CSSTransition } from 'react-transition-group';
+import { Link as RouterLink, Redirect } from 'react-router-dom';
 
 const theme = createMuiTheme({
   palette: {
@@ -52,13 +54,13 @@ export default function Navbar(props) {
   const [isTransparent, setIsTransparent] = useState(true);
   const [scroll, setScroll] = useState(0);
   useEffect(() => {
-      function updatePosition() {
-          setScroll(window.pageYOffset);
-      }
-      window.addEventListener('scroll', updatePosition);
-      if (scroll>10) setIsTransparent(false)
-      else setIsTransparent(true);
-      return () => window.removeEventListener('scroll', updatePosition);
+    function updatePosition() {
+      setScroll(window.pageYOffset);
+    }
+    window.addEventListener('scroll', updatePosition);
+    if (scroll > 10) setIsTransparent(false)
+    else setIsTransparent(true);
+    return () => window.removeEventListener('scroll', updatePosition);
   }, [scroll]);
 
   const classes = useStyles();
@@ -119,7 +121,7 @@ export default function Navbar(props) {
           aria-label="account of current user"
           aria-controls="primary-search-account-menu"
           aria-haspopup="true"
-          style={{color:"white"}}
+          style={{ color: "white" }}
         >
           <AccountCircle />
         </IconButton>
@@ -130,7 +132,7 @@ export default function Navbar(props) {
           aria-label="account of current user"
           aria-controls="primary-search-account-menu"
           aria-haspopup="true"
-          style={{color:"white"}}
+          style={{ color: "white" }}
         >
           <AccountCircle />
         </IconButton>
@@ -141,14 +143,14 @@ export default function Navbar(props) {
           aria-label="account of current user"
           aria-controls="primary-search-account-menu"
           aria-haspopup="true"
-          style={{color:"white"}}
+          style={{ color: "white" }}
         >
           <AccountCircle />
         </IconButton>
         <p>A propos</p>
       </MenuItem>
       <MenuItem>
-        <IconButton aria-label="show 4 new mails" style={{color:"white"}}>
+        <IconButton aria-label="show 4 new mails" style={{ color: "white" }}>
           <Badge badgeContent={4} color="secondary">
             <MailIcon />
           </Badge>
@@ -156,7 +158,7 @@ export default function Navbar(props) {
         <p>Messages</p>
       </MenuItem>
       <MenuItem>
-        <IconButton aria-label="show 11 new notifications" style={{color:"white"}}>
+        <IconButton aria-label="show 11 new notifications" style={{ color: "white" }}>
           <Badge badgeContent={11} color="secondary">
             <NotificationsIcon />
           </Badge>
@@ -168,8 +170,8 @@ export default function Navbar(props) {
           aria-label="account of current user"
           aria-controls="primary-search-account-menu"
           aria-haspopup="true"
-          style={{color:"white"}}
-                  >
+          style={{ color: "white" }}
+        >
           <AccountCircle />
         </IconButton>
         <p>Profile</p>
@@ -180,55 +182,55 @@ export default function Navbar(props) {
   return (
     <ThemeProvider theme={theme}>
       <div className={classes.grow}>
-      <CSSTransition 
-      in={isTransparent}
-      timeout={3000}
-      classNames="navScroll"
-      >
-      <div className="navbar">
-          <Toolbar>
-            <Button style={{color:"white"}}>Home</Button>
-            <div className={classes.sectionDesktopRight}>
-              <Button style={{color:"white"}}>Revendeur</Button>
-              <Button style={{color:"white"}}>Contact</Button>
-              <Button style={{color:"white"}}>About</Button>
-            </div>
-            <div className={classes.grow} />
-            <div className={classes.sectionDesktopLeft}>
-              <IconButton aria-label="show 4 new mails" style={{color:"white"}}>
-                <Badge badgeContent={4} color="secondary">
-                  <MailIcon />
-                </Badge>
-              </IconButton>
-              <IconButton aria-label="show 17 new notifications" style={{color:"white"}}>
-                <Badge badgeContent={17} color="secondary">
-                  <NotificationsIcon />
-                </Badge>
-              </IconButton>
-              <IconButton
-                edge="end"
-                aria-label="account of current user"
-                aria-controls={menuId}
-                aria-haspopup="true"
-                onClick={handleProfileMenuOpen}
-                style={{color:"white"}}
-              >
-                <AccountCircle />
-              </IconButton>
-            </div>
-            <div className={classes.sectionMobile}>
-              <IconButton
-                aria-label="show more"
-                aria-controls={mobileMenuId}
-                aria-haspopup="true"
-                onClick={handleMobileMenuOpen}
-                style={{color:"white"}}
-              >
-                <MoreIcon />
-              </IconButton>
-            </div>
-          </Toolbar>
-        </div>
+        <CSSTransition
+          in={isTransparent}
+          timeout={3000}
+          classNames="navScroll"
+        >
+          <div className="navbar">
+            <Toolbar>
+              <Button style={{ color: "white" }} component={RouterLink} to="/">Home</Button>
+              <div className={classes.sectionDesktopRight}>
+                <Button style={{ color: "white" }} component={RouterLink} to="/revendeur">Revendeur</Button>
+                <Button style={{ color: "white" }} component={RouterLink} to="/contact">Contact</Button>
+                <Button style={{ color: "white" }}>About</Button>
+              </div>
+              <div className={classes.grow} />
+              <div className={classes.sectionDesktopLeft}>
+                <IconButton aria-label="show 4 new mails" style={{ color: "white" }}>
+                  <Badge badgeContent={4} color="secondary">
+                    <MailIcon />
+                  </Badge>
+                </IconButton>
+                <IconButton aria-label="show 17 new notifications" style={{ color: "white" }}>
+                  <Badge badgeContent={17} color="secondary">
+                    <NotificationsIcon />
+                  </Badge>
+                </IconButton>
+                <IconButton
+                  edge="end"
+                  aria-label="account of current user"
+                  aria-controls={menuId}
+                  aria-haspopup="true"
+                  onClick={handleProfileMenuOpen}
+                  style={{ color: "white" }}
+                >
+                  <AccountCircle />
+                </IconButton>
+              </div>
+              <div className={classes.sectionMobile}>
+                <IconButton
+                  aria-label="show more"
+                  aria-controls={mobileMenuId}
+                  aria-haspopup="true"
+                  onClick={handleMobileMenuOpen}
+                  style={{ color: "white" }}
+                >
+                  <MoreIcon />
+                </IconButton>
+              </div>
+            </Toolbar>
+          </div>
         </CSSTransition>
         {renderMobileMenu}
         {renderMenu}

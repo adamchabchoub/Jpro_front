@@ -105,7 +105,7 @@ export default function Revendeur() {
         <Navbar />
         <br />
         <div className={classes.formContainer} style={{ width: "45vw" }}>
-          <h1 className={classes.title} style={{ fontSize: "3.5vw" }}>Devenir Revendeur de nos Logiciels</h1>
+          <h1 className={classes.title} style={{ fontSize: "3.5vw" }}>Devenir Revendeur</h1>
           <form>
             <div className="form-row">
               <TextField
