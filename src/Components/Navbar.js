@@ -10,11 +10,10 @@ import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import Button from '@material-ui/core/Button';
-import Link from '@material-ui/core/Link';
 import { ThemeProvider } from '@material-ui/styles';
 import '../App.css';
 import { CSSTransition } from 'react-transition-group';
-import { Link as RouterLink, Redirect } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
 
 const theme = createMuiTheme({
   palette: {

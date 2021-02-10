@@ -1,116 +1,93 @@
-import React from 'react';
-import Image from 'material-ui-image';
-import erpImg from '../Assets/erp.jpg'
+import React from 'react'
+import InfoLogicielCard from './InfoLogicielCard';
+import capture from '../Assets/capture.png';
+import Navbar from './Navbar';
 import { makeStyles } from '@material-ui/core/styles';
-import { useMediaQuery } from 'react-responsive';
-import Accordion from '@material-ui/core/Accordion';
-import AccordionSummary from '@material-ui/core/AccordionSummary';
-import AccordionDetails from '@material-ui/core/AccordionDetails';
-import Typography from '@material-ui/core/Typography';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import softwareImage from "../Assets/logiciel4.png";
+import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
 
-
-
-const useStyles = makeStyles((theme) => ({
-    imageContainerLaptop: {
-        display: "flex",
-        width: "40vh",
+const useStyles = makeStyles({
+    topContainer: {
+        height: "70vh",
+        width: "100%",
+        backgroundColor: "#020611"
     },
-    imageContainerMobile: {
-        display: "flex",
-        width: "50vh",
-        marginLeft: "auto",
-        marginRight: "auto",
-        boxShadow: "0 0 10px rgba(33,33,33,1)", 
-        // marginTop: "5%"
+    imageContainer: {
+        backgroundImage: `url(${softwareImage})`,
+        backgroundSize:"cover",
+        width: "48vw",
+        height: "80vh",
+        position: "absolute",
+        top: "12vh",
+        right: "0vw"
     },
-    descriptionContainer: {
-        marginLeft: '5%',
-        height: "40vh",
-        width: "55vw"
-
-    },
-    description: {
-        fontSize: "17px",
-        fontFamily: "Playfair Display",
-    },
-    accordionContainer: {
-        backgroundColor: "transparent",
-        width: "80%",
-        marginLeft: "auto",
-        marginRight: "auto",
-    },
-    accordionTitle:{
-        fontSize:"3vw"
-    },
-    accordionDetails:{
-        flex:1,
-        flexDirection:"column"
+    title: {
+        color: "white",
+        paddingTop: "12vh",
+        fontFamily:"Playfair Display",
+        fontSize:"60px",
+        marginLeft:"18vw"
     }
-}))
-
-const Desktop = ({ children }) => {
-    const isDesktop = useMediaQuery({ minWidth: 1037 })
-    return isDesktop ? children : null
-}
-// const Tablet = ({ children }) => {
-//     const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1036 })
-//     return isTablet ? children : null
-// }
-const Mobile = ({ children }) => {
-    const isMobile = useMediaQuery({ maxWidth: 1036 })
-    return isMobile ? children : null
-}
-// const Default = ({ children }) => {
-//     const isNotMobile = useMediaQuery({ minWidth: 768 })
-//     return isNotMobile ? children : null
-// }
-
-export default function Logiciel(props) {
+})
+export default function Logiciel() {
     const classes = useStyles();
 
     return (
         <div>
-            <Desktop>
-                <div className="box">
-                    <div className={classes.imageContainerLaptop}>
-                        <Image
-                            src={erpImg}
-                            style={{ width: "100%" }}
-                            color="transparent"
-                            // cover
-                        />
-                    </div>
-                    <div className={classes.descriptionContainer}>
-                        <h1 style={{ fontSize: "2.5vw", }}>{props.title}</h1>
-                        <p className={classes.description}>{props.description}</p>
-                    </div>
+            <Navbar />
+            <div className={classes.topContainer}>
+                <div style={{paddingTop:"10vh"}}>
+                <Zoom right cascade collapse>
+                <h1 className={classes.title}>Logiciel Comptabilité</h1>
+            </Zoom>
                 </div>
-            </Desktop>
+                <div className={classes.imageContainer} />
+            </div>
+            <Fade>
+                <InfoLogicielCard
+                    flexDirection="row"
+                    marginLeft="10vw"
+                    marginRight="0"
+                    image={capture}
+                    title="Une gestion des congés adaptée à votre structure"
+                    description="Besoin de simplifier, automatiser vos processus RH et dématérialiser les données de vos salariés ? Sage Espace Employés vous permet rapidement le suivi et la gestion des congés et absences de vos salariés, de la demande de congés, jusqu’à l’envoi des données en paye pour la préparation des bulletins de salaire."
+                />
+            </Fade>
+            <Fade>
+            <InfoLogicielCard
+                flexDirection="row-reverse"
+                marginLeft="0"
+                marginRight="10vw"
+                image={capture}
+                title="Une vraie souplesse d’utilisation"
+                description="Grâce à son circuit de validation largement paramétrable, vos responsables d’équipes valident les demandes d’absences en étant au bureau ou depuis leur mobile. Sage Espace Employés s’adapte à votre organisation de la plus simple à la plus complexe, en France ou à l’international.
+                Vos compteurs et soldes de congés payés, RTT, heures de récupération, absence maladie sont à jour en temps réel. Les contrôles sont automatiquement faits lors de la prise de congés par vos salariés."
+            />
+            </Fade>
+            <Fade>
+            <InfoLogicielCard
+                flexDirection="row"
+                marginLeft="10vw"
+                marginRight="0"
+                image={capture}
+                title="Le planning des congés en temps réel et partagé"
+                description="Oubliez les files d’attentes dans le bureau pour demander l’état de ses congés, les délais trop longs de préparation des données pour la paie, le planning Excel, difficile à maintenir et non partagé.
+                Vous gérez désormais le planning de présence de vos salariés et automatisez tout le processus de gestion des congés et des absences , du plus simple au plus complexe."
+            />
+            </Fade>
+            <Fade>
+            <InfoLogicielCard
+                flexDirection="row-reverse"
+                marginLeft="0"
+                marginRight="10vw"
+                image={capture}
+                title="Une paie prête dans les délais"
+                description="En fin de mois, vous allez gagner un temps précieux et vous éviter le stress de la paie en retard.
 
-            <Mobile>
-                <Accordion style={{ marginLeft: "auto", marginRight: "auto", width: "80%", backgroundColor: "transparent", marginTop: "4%" }}>
-                    <AccordionSummary
-                        expandIcon={<ExpandMoreIcon />}
-                        aria-controls="panel1a-content"
-                        id="panel1a-header"
-                    >
-                        <Typography className={classes.accordionTitle}>{props.title}</Typography>
-                    </AccordionSummary>
-                    <AccordionDetails className={classes.accordionDetails}>
-                        
-                            <p className={classes.description}>{props.description}</p>
-                            <div className={classes.imageContainerMobile}>
-                                <Image
-                                    src={erpImg}
-                                    style={{ width: "100%" }}
-                                    color="transparent"
-                                />
-                            </div>
-                     
-                    </AccordionDetails>
-                </Accordion>
-            </Mobile>
+                Il vous suffit d’exporter en un clic les données de congés et d’absences de Sage Espace Employés vers votre service de paie, interne ou externalisée, vers Sage 100cloud Paie & RH !"
+            />
+            </Fade>
         </div>
     )
 }
