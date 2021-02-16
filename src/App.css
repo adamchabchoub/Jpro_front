@@ -1,5 +1,5 @@
 .navScroll-enter {
-    background-color:  rgba(0, 0, 100, 0.9);
+    background-color:  #020611;
     padding-top: 0 !important;
 }
 
@@ -20,13 +20,13 @@
 }
 
 .navScroll-exit-active {
-    background-color:  rgba(0, 0, 100, 0.9);
+    background-color:  #020611;
     transition: background-color 500ms, padding-top 500ms !important;
     padding-top: 0 !important;
 }
 
 .navScroll-exit-done {
-    background-color: rgba(0, 0, 100, 0.9);
+    background-color: #020611;
     padding-top: 0 !important;
 }
 
@@ -59,4 +59,25 @@
     color:#3936e0
 }
 
+.background2 {
+    position: relative; 
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
+.background2::after {    
+    content: "";
+    background-image: url("./Assets/SoftwareHome2.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.1;
+}

@@ -107,7 +107,7 @@ export default function Contact() {
                 <Navbar />
                 <br />
                 <div className={classes.formContainer} style={{ width: "45vw" }}>
-                    <h1 className={classes.title} style={{fontSize: "2.5vw"}}>Bienvenue BenJomaa Motors</h1>
+                    <h1 className={classes.title} style={{fontSize: "2.5vw"}}>Bienvenue Client</h1>
                     <form>
                         <div className="form-row">
                             <TextField

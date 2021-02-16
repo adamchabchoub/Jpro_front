@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar';
+import { makeStyles } from '@material-ui/core/styles';
 import softwareImg from '../Assets/SoftwareHome.jpg'
 import softwareImg2 from '../Assets/SoftwareHome2.jpeg'
 import LogicielCard from './LogicielCard';
 import Zoom from 'react-reveal/Zoom';
 import ScrollButton from './ScrollButton'
 import Fade from 'react-reveal/Fade';
+import Footer from './Footer';
 
 export default function Main() {
     const [showTxt, setShowTxt] = useState(false)
@@ -45,6 +47,35 @@ export default function Main() {
     })
 
 
+    const useStyles = makeStyles({
+        background2: {
+            position: "relative", 
+            height: "100%",
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            paddingBottom:"10%",
+            paddingTop:"5%"
+        },
+        
+        background2After: {    
+            content: "",
+            backgroundImage: `url("${softwareImg2}")`,
+            backgroundSize: "cover",
+            backgroundAttachment: "fixed",
+            position: "absolute",
+            // top: `${height}px`,
+            top:0,
+            right: "0px",
+            bottom: "0px",
+            left: "0px",
+            opacity: 0.1,
+        }
+    })
+const classes=useStyles();
+
     const styles = {
         background: {
             backgroundImage: `url("${softwareImg}")`,
@@ -55,26 +86,26 @@ export default function Main() {
             backgroundAttachment: "fixed",
         },
 
-        background2: {
-            backgroundImage: `url("${softwareImg2}")`,
-            backgroundRepeat: 'no-repeat',
-            width: '100%',
-            height: "500%",
-            position: 'absolute',
-            color: 'white',
-            backgroundAttachment: "fixed",
-            opacity: 0.1,
-            zIndex: "-1",
-            top: `${height}px`,
-        },
+        // background2: {
+            // backgroundImage: `url("${softwareImg2}")`,
+            // backgroundRepeat: 'no-repeat',
+            // opacity: 0.1,
+            // width: '100%',
+            // height: "500%",
+            // position: 'absolute',
+            // backgroundAttachment: "fixed",
+            // color: 'white',
+            // zIndex: "-1",
+            // top: `${height}px`,
+        // },
 
 
     }
 
     return (
         <div>
-        <Navbar />
-        <ScrollButton />
+            <Navbar />
+            <ScrollButton />
             <div style={styles.background}>
 
                 <br />
@@ -83,8 +114,8 @@ export default function Main() {
                 </Zoom>
             </div>
             <div id="scrollTo">
-                <div style={styles.background2}>
-                </div>
+                <div style={styles.background2} className={classes.background2}>
+                <div className={classes.background2After}></div>
                 <Fade right>
                     <LogicielCard description="La comptabilité gérée à l’aide du module J-PRO Comptabilité permet de disposer de toutes les informations concernant les transactions de l’entreprise et la situation de ses comptes. Ce qui lui permet d’avoir une meilleure visibilité sur son activité et l’aide à bien planifier sa stratégie de développement." title="Comptabilité" />
                 </Fade>
@@ -116,8 +147,9 @@ export default function Main() {
                     Le module J-PRO Gestion financière est conçue pour offrir, d’une façon instantanée, une vision détaillée et globale de l’activité de l’entreprise, lui permettant une prise de décision rapide et éclairée." title="Gestion Financière" />
                 </Fade>
             </div>
-
+            <Footer />
         </div>
+        </div >
     )
 }
 
