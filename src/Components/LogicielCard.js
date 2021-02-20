@@ -8,7 +8,7 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-
+import { Button } from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -18,11 +18,16 @@ const useStyles = makeStyles((theme) => ({
     },
     imageContainerMobile: {
         display: "flex",
-        width: "50vh",
+        width: "30vw",
         marginLeft: "auto",
         marginRight: "auto",
-        boxShadow: "0 0 10px rgba(33,33,33,1)", 
-        // marginTop: "5%"
+        boxShadow: "0 0 10px rgba(33,33,33,1)",
+        '@media(max-width: 770px)': {
+            width: "40vw"
+        },
+        '@media(max-width: 510px)': {
+            width: "60vw"
+        },
     },
     descriptionContainer: {
         marginLeft: '5%',
@@ -35,17 +40,32 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: "Playfair Display",
     },
     accordionContainer: {
-        backgroundColor: "transparent",
-        width: "80%",
         marginLeft: "auto",
         marginRight: "auto",
+        width: "80vw",
+        backgroundColor: "transparent",
+        marginTop: "4%"
     },
-    accordionTitle:{
-        fontSize:"3vw"
+    accordionTitle: {
+        fontSize: "3vw"
     },
-    accordionDetails:{
-        flex:1,
-        flexDirection:"column"
+    accordionDetails: {
+        flex: 1,
+        flexDirection: "column"
+    },
+    buttonAccordion: {
+        marginTop: "5vh",
+        width: "30vw",
+        marginLeft: "auto",
+        marginRight: "auto",
+        textAlign: "center",
+        fontFamily: "Playfair Display",
+        '@media(max-width: 770px)': {
+            width: "40vw"
+        },
+        '@media(max-width: 510px)': {
+            width: "60vw"
+        },
     }
 }))
 
@@ -53,19 +73,10 @@ const Desktop = ({ children }) => {
     const isDesktop = useMediaQuery({ minWidth: 1037 })
     return isDesktop ? children : null
 }
-// const Tablet = ({ children }) => {
-//     const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1036 })
-//     return isTablet ? children : null
-// }
 const Mobile = ({ children }) => {
     const isMobile = useMediaQuery({ maxWidth: 1036 })
     return isMobile ? children : null
 }
-// const Default = ({ children }) => {
-//     const isNotMobile = useMediaQuery({ minWidth: 768 })
-//     return isNotMobile ? children : null
-// }
-
 export default function Logiciel(props) {
     const classes = useStyles();
 
@@ -78,7 +89,7 @@ export default function Logiciel(props) {
                             src={erpImg}
                             style={{ width: "100%" }}
                             color="transparent"
-                            // cover
+                        // cover
                         />
                     </div>
                     <div className={classes.descriptionContainer}>
@@ -89,7 +100,7 @@ export default function Logiciel(props) {
             </Desktop>
 
             <Mobile>
-                <Accordion style={{ marginLeft: "auto", marginRight: "auto", width: "80%", backgroundColor: "transparent", marginTop: "4%" }}>
+                <Accordion className={classes.accordionContainer}>
                     <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="panel1a-content"
@@ -98,16 +109,23 @@ export default function Logiciel(props) {
                         <Typography className={classes.accordionTitle}>{props.title}</Typography>
                     </AccordionSummary>
                     <AccordionDetails className={classes.accordionDetails}>
-                        
-                            <p className={classes.description}>{props.description}</p>
-                            <div className={classes.imageContainerMobile}>
-                                <Image
-                                    src={erpImg}
-                                    style={{ width: "100%" }}
-                                    color="transparent"
-                                />
-                            </div>
-                     
+
+                        <p className={classes.description}>{props.description}</p>
+                        <div className={classes.imageContainerMobile}>
+                            <Image
+                                src={erpImg}
+                                style={{ width: "100%" }}
+                                color="transparent"
+                            />
+                        </div>
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            href="/test"
+                            className={classes.buttonAccordion}
+                        >
+                            J-PRO {props.title}
+                        </Button>
                     </AccordionDetails>
                 </Accordion>
             </Mobile>

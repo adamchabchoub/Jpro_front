@@ -34,11 +34,11 @@
     width: 100%;
     position: fixed;
     padding-top: 1.5%;
-    z-index: 2;
+    z-index: 4;
 }
 
 .title {
-    padding-top: 34vh;
+    padding-top: 32vh;
     text-align: center;
     font-size: 6vw;
     font-family: 'Playfair Display', serif;
@@ -50,7 +50,7 @@
     margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    width: 100%;
     box-shadow: 0 0 10px rgba(33,33,33,.2); 
 }
 

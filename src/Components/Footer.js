@@ -24,14 +24,14 @@ const useStyles = makeStyles({
         width: "300px",
         textAlign: "center",
         flexWrap: "nowrap",
-        marginBottom:"2vh"
+        marginBottom: "2vh"
         // paddingTop:"20px"
     },
     socialText: {
         color: "white",
         marginBottom: "-1px",
-        '@media(max-width: 790px)': {
-            fontSize:"32px"
+        '@media(max-width: 810px)': {
+            fontSize: "32px"
         }
     },
     copyrightContainer: {
@@ -59,33 +59,49 @@ const useStyles = makeStyles({
     partWithoutCopyright: {
         flexDirection: "row",
         display: "flex",
-        '@media(max-width: 790px)': {
+        '@media(max-width: 810px)': {
             flexDirection: "column",
             // backgroundColor:"red",
             alignItems: "center",
             marginLeft: "auto",
             marginRight: "auto",
-            marginBottom:"50px"
+            marginBottom: "50px"
         }
     },
     partTwoAndThree: {
         flexDirection: "row",
         display: "flex"
     },
-    partTwo: {
+    logiciels: {
         paddingTop: "20px",
         flexDirection: "column",
         display: "flex",
         marginLeft: "4vw",
         marginRight: "4vw",
-        marginBottom: "20px"
+        marginBottom: "20px",
+        '@media(max-width: 810px)': {
+            marginLeft: "2vw",
+            marginRight: "8vw",
+        },
+        '@media(max-width: 410px)': {
+            marginLeft: "2vw",
+            marginRight: "0vw",
+        }
     },
-    partThree: {
+    services: {
         paddingTop: "20px",
         flexDirection: "column",
         display: "flex",
         marginLeft: "3vw",
-        marginRight: "3vw"
+        marginRight: "3vw",
+        '@media(max-width: 810px)': {
+            marginLeft: "8vw",
+            marginRight: "0vw",
+        },
+        '@media(max-width: 410px)': {
+            marginLeft: "1vw",
+            marginRight: "0vw",
+        },
     },
     partFour: {
         backgroundImage: `url(${footerImg})`,
@@ -93,29 +109,31 @@ const useStyles = makeStyles({
         width: "380px",
         height: "300px",
         marginTop: "40px",
-        marginLeft:"6vw",
-        '@media(max-width: 790px)': {
+        marginLeft: "6vw",
+        '@media(max-width: 810px)': {
             display: "none"
         }
     },
     productsText: {
         color: "white",
-        '@media(max-width: 790px)': {
-            fontSize:"22px"
+        '@media(max-width: 810px)': {
+            fontSize: "22px"
         }
     },
     servicesText: {
         color: "white",
-        '@media(max-width: 790px)': {
-            fontSize:"22px"
+        '@media(max-width: 810px)': {
+            fontSize: "22px"
         }
     },
     productsLinks: {
-        marginTop: "2px",
+        marginTop: "4px",
         marginBottom: "8px",
         color: "white",
         fontSize: "14px",
-        whiteSpace: "nowrap"
+        '@media(min-width: 810px)': {
+            whiteSpace: "nowrap"
+        }
     },
 })
 export default function Footer() {
@@ -141,7 +159,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className={classes.partTwoAndThree}>
-                    <div className={classes.partTwo}>
+                    <div className={classes.logiciels}>
                         <h3 className={classes.productsText}>Logiciels J-PRO</h3>
                         <Link className={classes.productsLinks} component={RouterLink}>Gestion des ventes</Link>
                         <Link className={classes.productsLinks} component={RouterLink}>Gestion des achats</Link>
@@ -153,7 +171,7 @@ export default function Footer() {
                         <Link className={classes.productsLinks} component={RouterLink}>Gestion financière</Link>
                         <Link className={classes.productsLinks} component={RouterLink}>Gestion des immobilistions</Link>
                     </div>
-                    <div className={classes.partThree}>
+                    <div className={classes.services}>
                         <h3 className={classes.servicesText}>Services</h3>
                         <Link className={classes.productsLinks} component={RouterLink}>Assistance</Link>
                         <Link className={classes.productsLinks} component={RouterLink}>Formation</Link>
