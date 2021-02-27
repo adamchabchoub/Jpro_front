@@ -6,10 +6,12 @@ import Revendeur from './Components/Form.Revendeur';
 import NotFoundView from './Components/NotFoundView';
 import Logiciel from './Components/Logiciel';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import ScrollToTop from './Components/ScrollToTop';
 
 function App() {
   return (
     <Router>
+    <ScrollToTop />
       <Switch>
         <Route path="/" exact component={Main} />
         <Route path="/client" component={Client} />

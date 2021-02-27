@@ -8,24 +8,27 @@ import Zoom from 'react-reveal/Zoom';
 import ScrollButton from './ScrollButton'
 import Fade from 'react-reveal/Fade';
 import Footer from './Footer';
+import { useLocation } from "react-router-dom";
+import Alert from './Alert.js'
 
 export default function Main() {
-    const [showTxt, setShowTxt] = useState(false)
+    const [showTitle, setShowTitle] = useState(false)
     const [height, setHeight] = useState(window.innerHeight);
     const updateDimensions = () => {
         setHeight(window.innerHeight);
     }
+
     useEffect(() => {
         window.addEventListener("resize", updateDimensions);
         return () => window.removeEventListener("resize", updateDimensions);
     });
 
     const updateShowTxt = () => {
-        setShowTxt(true)
+        setShowTitle(true)
     }
     let stateCheck = setInterval(() => {
         if (document.readyState !== 'loading') {
-            setShowTxt(true);
+            setShowTitle(true);
             clearInterval(stateCheck);
         }
     }, 100);
@@ -37,14 +40,20 @@ export default function Main() {
 
     const showTextOnScrollTop = () => {
         if (window.pageYOffset === 0) {
-            setShowTxt(false);
-            setShowTxt(true);
+            setShowTitle(false);
+            setShowTitle(true);
         }
     }
     useEffect(() => {
         window.addEventListener("scroll", showTextOnScrollTop)
         return () => window.removeEventListener("scroll", showTextOnScrollTop)
     })
+    const [showAlert, setShowAlert] = useState(false)
+    const location = useLocation();
+    useEffect(() => {
+        if (location.state !== undefined)
+            setShowAlert(true);
+    }, [location]);
 
 
     const useStyles = makeStyles({
@@ -90,9 +99,12 @@ export default function Main() {
         <div>
             <Navbar />
             <ScrollButton />
+            {(location.state !== undefined && showAlert) &&
+                <Alert message={location.state.message} />
+            }
             <div className={classes.background}>
                 <br />
-                <Zoom right cascade collapse when={showTxt}>
+                <Zoom right cascade collapse when={showTitle}>
                     <h1 className="title">J-PRO: Meilleur ERP Tunisie</h1>
                 </Zoom>
             </div>

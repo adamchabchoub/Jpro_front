@@ -144,16 +144,16 @@ export default function Footer() {
                 <div className={classes.partOne}>
                     <div className={classes.socialNetworkContainer}>
                         <h3 className={classes.socialText}>Rejoignez nous!</h3>
-                        <IconButton>
+                        <IconButton href="https://www.facebook.com/TUNIDEV">
                             <FacebookIcon style={{ fill: "#4267B2" }} />
                         </IconButton>
-                        <IconButton>
+                        <IconButton href="https://www.facebook.com/TUNIDEV">
                             <InstagramIcon style={{ fill: "#E1306C" }} />
                         </IconButton>
-                        <IconButton>
+                        <IconButton href="https://www.facebook.com/TUNIDEV">
                             <LinkedInIcon style={{ fill: "#0e76a8" }} />
                         </IconButton>
-                        <IconButton>
+                        <IconButton href="https://www.facebook.com/TUNIDEV">
                             <YouTubeIcon style={{ fill: "red" }} />
                         </IconButton>
                     </div>
@@ -161,21 +161,21 @@ export default function Footer() {
                 <div className={classes.partTwoAndThree}>
                     <div className={classes.logiciels}>
                         <h3 className={classes.productsText}>Logiciels J-PRO</h3>
-                        <Link className={classes.productsLinks} component={RouterLink}>Gestion des ventes</Link>
-                        <Link className={classes.productsLinks} component={RouterLink}>Gestion des achats</Link>
-                        <Link className={classes.productsLinks} component={RouterLink}>Comptabilité</Link>
-                        <Link className={classes.productsLinks} component={RouterLink}>Gestion des stocks</Link>
-                        <Link className={classes.productsLinks} component={RouterLink}>Gestion des ressources humaines</Link>
-                        <Link className={classes.productsLinks} component={RouterLink}>GPAO</Link>
-                        <Link className={classes.productsLinks} component={RouterLink}>Gestion de la paie</Link>
-                        <Link className={classes.productsLinks} component={RouterLink}>Gestion financière</Link>
-                        <Link className={classes.productsLinks} component={RouterLink}>Gestion des immobilistions</Link>
+                        <Link className={classes.productsLinks} component={RouterLink} to="/">Gestion des ventes</Link>
+                        <Link className={classes.productsLinks} component={RouterLink} to="/">Gestion des achats</Link>
+                        <Link className={classes.productsLinks} component={RouterLink} to="/">Comptabilité</Link>
+                        <Link className={classes.productsLinks} component={RouterLink} to="/">Gestion des stocks</Link>
+                        <Link className={classes.productsLinks} component={RouterLink} to="/">Gestion des ressources humaines</Link>
+                        <Link className={classes.productsLinks} component={RouterLink} to="/">GPAO</Link>
+                        <Link className={classes.productsLinks} component={RouterLink} to="/">Gestion de la paie</Link>
+                        <Link className={classes.productsLinks} component={RouterLink} to="/">Gestion financière</Link>
+                        <Link className={classes.productsLinks} component={RouterLink} to="/">Gestion des immobilistions</Link>
                     </div>
                     <div className={classes.services}>
                         <h3 className={classes.servicesText}>Services</h3>
-                        <Link className={classes.productsLinks} component={RouterLink}>Assistance</Link>
-                        <Link className={classes.productsLinks} component={RouterLink}>Formation</Link>
-                        <Link className={classes.productsLinks} component={RouterLink}>Conception et mise en place</Link>
+                        <Link className={classes.productsLinks} component={RouterLink} to="/">Assistance</Link>
+                        <Link className={classes.productsLinks} component={RouterLink} to="/">Formation</Link>
+                        <Link className={classes.productsLinks} component={RouterLink} to="/">Conception et mise en place</Link>
                     </div>
                 </div>
                 <div className={classes.partFour}>

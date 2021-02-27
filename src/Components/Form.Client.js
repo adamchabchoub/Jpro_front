@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: "10%",
         fontFamily: "Playfair Display",
         paddingTop: "6vh",
-        paddingBottom:"5vh"
+        paddingBottom: "5vh"
     },
     besoinTxt: {
         marginLeft: "10%",
@@ -107,7 +107,7 @@ export default function Contact() {
                 <Navbar />
                 <br />
                 <div className={classes.formContainer} style={{ width: "45vw" }}>
-                    <h1 className={classes.title} style={{fontSize: "2.5vw"}}>Bienvenue Client</h1>
+                    <h1 className={classes.title} style={{ fontSize: "2.5vw" }}>Bienvenue Client</h1>
                     <form>
                         <div className="form-row">
                             <TextField
@@ -116,7 +116,7 @@ export default function Contact() {
                                 variant="outlined"
                                 color="primary"
                                 className={classes.formTextField}
-                                style={{width: "30vw"}}
+                                style={{ width: "30vw" }}
                             />
                         </div>
                         <div className="form-row">
@@ -126,7 +126,7 @@ export default function Contact() {
                                 variant="outlined"
                                 color="primary"
                                 className={classes.formTextField}
-                                style={{width: "30vw"}}
+                                style={{ width: "30vw" }}
                             />
                         </div>
                         <div className="form-row">
@@ -136,7 +136,7 @@ export default function Contact() {
                                 variant="outlined"
                                 color="primary"
                                 className={classes.formTextField}
-                                style={{width: "30vw"}}
+                                style={{ width: "30vw" }}
                             />
                         </div>
                         <FormControl required className={classes.formControl}>
@@ -167,7 +167,7 @@ export default function Contact() {
                         </FormControl>
                         <p className={classes.besoinTxt}>Votre Besoin?</p>
                         <RadioGroup aria-label="besoin" name="besoin1" value={value} onChange={handleChangeRadio} className={classes.formTextField}
-                        style={{width: "30vw"}}>
+                            style={{ width: "30vw" }}>
                             <FormControlLabel label="Reporter un problème" control={<Radio color="primary" />} value="problème" />
                             <FormControlLabel label="Demander l'ajout d'une fonctionalité" control={<Radio color="primary" />} value="fonctionalité" />
                             <FormControlLabel label="Demander une formation" control={<Radio color="primary" />} value="formation" />
@@ -181,7 +181,7 @@ export default function Contact() {
                                 rows={4}
                                 variant="outlined"
                                 className={classes.formTextField}
-                                style={{width: "30vw"}}
+                                style={{ width: "30vw" }}
                             />
                         </div>
                         <div className="form-row">
@@ -196,15 +196,15 @@ export default function Contact() {
                     </form>
                 </div>
             </Desktop>
-            
-            
+
+
             <Tablet>
-            <div className={classes.container} style={{ backgroundSize: "150%", }}>
+                <div className={classes.container} style={{ backgroundSize: "150%", }}>
                 </div>
                 <Navbar />
                 <br />
                 <div className={classes.formContainer} style={{ width: "75vw", }} >
-                    <h1 className={classes.title} style={{fontSize: "3.8vw"}}>Bienvenue BenJomaa Motors</h1>
+                    <h1 className={classes.title} style={{ fontSize: "3.8vw" }}>Bienvenue BenJomaa Motors</h1>
                     <form>
                         <div className="form-row">
                             <TextField
@@ -213,7 +213,7 @@ export default function Contact() {
                                 variant="outlined"
                                 color="primary"
                                 className={classes.formTextField}
-                                style={{width: "50vw"}}
+                                style={{ width: "50vw" }}
                             />
                         </div>
                         <div className="form-row">
@@ -223,7 +223,7 @@ export default function Contact() {
                                 variant="outlined"
                                 color="primary"
                                 className={classes.formTextField}
-                                style={{width: "50vw"}}
+                                style={{ width: "50vw" }}
                             />
                         </div>
                         <div className="form-row">
@@ -233,7 +233,7 @@ export default function Contact() {
                                 variant="outlined"
                                 color="primary"
                                 className={classes.formTextField}
-                                style={{width: "50vw"}}
+                                style={{ width: "50vw" }}
                             />
                         </div>
                         <FormControl required className={classes.formControl}>
@@ -244,7 +244,7 @@ export default function Contact() {
                                 value={logiciel}
                                 onChange={handleChangeSelect}
                                 autoWidth
-                                // native
+                            // native
                             // MenuProps={{
                             //     disableScrollLock: true, 
                             //   }}
@@ -264,7 +264,7 @@ export default function Contact() {
                         </FormControl>
                         <p className={classes.besoinTxt}>Votre Besoin?</p>
                         <RadioGroup aria-label="besoin" name="besoin1" value={value} onChange={handleChangeRadio} className={classes.formTextField}
-                        style={{width: "50vw"}}>
+                            style={{ width: "50vw" }}>
                             <FormControlLabel label="Reporter un problème" control={<Radio color="primary" />} value="problème" />
                             <FormControlLabel label="Demander l'ajout d'une fonctionalité" control={<Radio color="primary" />} value="fonctionalité" />
                             <FormControlLabel label="Demander une formation" control={<Radio color="primary" />} value="formation" />
@@ -279,7 +279,7 @@ export default function Contact() {
                                 rows={4}
                                 variant="outlined"
                                 className={classes.formTextField}
-                                style={{width: "50vw"}}
+                                style={{ width: "50vw" }}
                             />
                         </div>
                         <div className="form-row">
@@ -294,15 +294,15 @@ export default function Contact() {
                     </form>
                 </div>
             </Tablet>
-            
-            
+
+
             <Mobile>
-            <div className={classes.container} style={{ backgroundSize: "320%", }}>
+                <div className={classes.container} style={{ backgroundSize: "320%", }}>
                 </div>
                 <Navbar />
                 <br />
                 <div className={classes.formContainer} style={{ width: "85vw", }} >
-                    <h1 className={classes.title} style={{fontSize: "4.8vw"}}>Bienvenue BenJomaa Motors</h1>
+                    <h1 className={classes.title} style={{ fontSize: "4.8vw" }}>Bienvenue BenJomaa Motors</h1>
                     <form>
                         <div className="form-row">
                             <TextField
@@ -311,7 +311,7 @@ export default function Contact() {
                                 variant="outlined"
                                 color="primary"
                                 className={classes.formTextField}
-                                style={{width: "65vw"}}
+                                style={{ width: "65vw" }}
                             />
                         </div>
                         <div className="form-row">
@@ -321,7 +321,7 @@ export default function Contact() {
                                 variant="outlined"
                                 color="primary"
                                 className={classes.formTextField}
-                                style={{width: "65vw"}}
+                                style={{ width: "65vw" }}
                             />
                         </div>
                         <div className="form-row">
@@ -331,7 +331,7 @@ export default function Contact() {
                                 variant="outlined"
                                 color="primary"
                                 className={classes.formTextField}
-                                style={{width: "65vw"}}
+                                style={{ width: "65vw" }}
                             />
                         </div>
                         <FormControl required className={classes.formControl}>
@@ -362,7 +362,7 @@ export default function Contact() {
                         </FormControl>
                         <p className={classes.besoinTxt}>Votre Besoin?</p>
                         <RadioGroup aria-label="besoin" name="besoin1" value={value} onChange={handleChangeRadio} className={classes.formTextField}
-                        style={{width: "65vw"}}>
+                            style={{ width: "65vw" }}>
                             <FormControlLabel label="Reporter un problème" control={<Radio color="primary" />} value="problème" />
                             <FormControlLabel label="Demander l'ajout d'une fonctionalité" control={<Radio color="primary" />} value="fonctionalité" />
                             <FormControlLabel label="Demander une formation" control={<Radio color="primary" />} value="formation" />
@@ -377,7 +377,7 @@ export default function Contact() {
                                 rows={4}
                                 variant="outlined"
                                 className={classes.formTextField}
-                                style={{width: "65vw"}}
+                                style={{ width: "65vw" }}
                             />
                         </div>
                         <div className="form-row">
