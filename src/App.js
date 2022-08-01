@@ -1,16 +1,19 @@
 import './App.css';
-import Main from './Components/Main';
-import Contact from './Components/Form.Contact';
-import Client from './Components/Form.Client';
-import Revendeur from './Components/Form.Revendeur';
+import Main from './Pages/Home/Home';
+import Contact from './Pages/contact/Form.Contact';
+import Client from './Pages/contact-client/Form.Client';
+import Revendeur from './Pages/contact-revendeur/Form.Revendeur';
 import NotFoundView from './Components/NotFoundView';
-import Logiciel from './Components/Logiciel';
+import Logiciel from './Pages/Logiciel/Logiciel';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ScrollToTop from './Components/ScrollToTop';
+import Navbar from './Components/Navbar/Navbar';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
     <Router>
+      <Navbar/>
     <ScrollToTop />
       <Switch>
         <Route path="/" exact component={Main} />
@@ -20,6 +23,7 @@ function App() {
         <Route path="/test" component={Logiciel} />
         <Route path="*" component={NotFoundView} />
       </Switch>
+      <Footer/>
     </Router>
   );
 }

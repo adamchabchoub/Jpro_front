@@ -71,14 +71,6 @@ export default function InfoLogicielCard(props) {
                 width: "80vw",
             },
         },
-        // title: {
-        //     '@media(max-width: 1150px)': {
-        //         width: "80vw",
-        //     },
-        //     '@media(max-height: 600px)': {
-        //         width: "80vw",
-        //     },
-        // }
     });
     const classes = useStyles();
     const [isOpen, setIsOpen] = useState(false);

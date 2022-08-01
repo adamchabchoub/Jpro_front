@@ -40,8 +40,7 @@
 .title {
     padding-top: 32vh;
     text-align: center;
-    font-size: 6vw;
-    font-family: 'Playfair Display', serif;
+    font-size: 5vw;
 }
 
 .box {
@@ -52,6 +51,8 @@
     margin-right: auto;
     width: 100%;
     box-shadow: 0 0 10px rgba(33,33,33,.2); 
+    background-color: transparent;
+    border: 0;
 }
 
 .box:hover {
@@ -71,7 +72,7 @@
 
 .background2::after {    
     content: "";
-    background-image: url("./Assets/SoftwareHome2.jpeg");
+    background-image: "Assets/SoftwareHome2.jpeg";
     background-size: cover;
     background-attachment: fixed;
     position: absolute;
@@ -81,3 +82,4 @@
     left: 0px;
     opacity: 0.1;
 }
+

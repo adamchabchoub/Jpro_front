@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'material-ui-image';
-import erpImg from '../Assets/erp.jpg'
 import { makeStyles } from '@material-ui/core/styles';
 import { useMediaQuery } from 'react-responsive';
 import Accordion from '@material-ui/core/Accordion';
@@ -37,7 +36,6 @@ const useStyles = makeStyles((theme) => ({
     },
     description: {
         fontSize: "17px",
-        fontFamily: "Playfair Display",
     },
     accordionContainer: {
         marginLeft: "auto",
@@ -59,7 +57,6 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: "auto",
         marginRight: "auto",
         textAlign: "center",
-        fontFamily: "Playfair Display",
         '@media(max-width: 770px)': {
             width: "40vw"
         },
@@ -80,21 +77,24 @@ const Mobile = ({ children }) => {
 export default function Logiciel(props) {
     const classes = useStyles();
 
+    const clickLogiciel =()=>{
+        console.log('hi')
+    }
+
     return (
         <div>
             <Desktop>
-                <div className="box">
+                <div className="box" href="/test" onClick={clickLogiciel}>
                     <div className={classes.imageContainerLaptop}>
                         <Image
-                            src={erpImg}
+                            src={`Assets/images_logiciels/${props.logiciel.image}`}
                             style={{ width: "100%" }}
                             color="transparent"
-                        // cover
                         />
                     </div>
                     <div className={classes.descriptionContainer}>
-                        <h1 style={{ fontSize: "2.5vw", }}>{props.title}</h1>
-                        <p className={classes.description}>{props.description}</p>
+                        <h1 style={{ fontSize: "2.5vw", }}>{props.logiciel.name}</h1>
+                        <p className={classes.description}>{props.logiciel.description}</p>
                     </div>
                 </div>
             </Desktop>
@@ -106,14 +106,14 @@ export default function Logiciel(props) {
                         aria-controls="panel1a-content"
                         id="panel1a-header"
                     >
-                        <Typography className={classes.accordionTitle}>{props.title}</Typography>
+                        <Typography className={classes.accordionTitle}>{props.logiciel.name}</Typography>
                     </AccordionSummary>
                     <AccordionDetails className={classes.accordionDetails}>
 
-                        <p className={classes.description}>{props.description}</p>
+                        <p className={classes.description}>{props.logiciel.description}</p>
                         <div className={classes.imageContainerMobile}>
                             <Image
-                                src={erpImg}
+                                src={`Assets/images_logiciels/${props.logiciel.image}`}
                                 style={{ width: "100%" }}
                                 color="transparent"
                             />

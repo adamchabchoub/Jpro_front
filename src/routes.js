@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './Components/Navbar';
+import Navbar from './Components/Navbar/Navbar';
 import FormClient from './Components/Form.Client';
 import FormRevendeur from './Components/Form.Revendeur';
 import FormContact from './Components/Form.Contact';
