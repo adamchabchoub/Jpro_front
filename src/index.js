@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Wrapper from './Components/Wrapper';
 
 ReactDOM.render(
   <React.Fragment>
+    <Wrapper>
     <App />
+    </Wrapper>
   </React.Fragment>,
   document.getElementById('root')
 );

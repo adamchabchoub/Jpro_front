@@ -6,7 +6,10 @@ import ScrollButton from '../../Components/ScrollButton'
 import Fade from 'react-reveal/Fade';
 import { useLocation } from "react-router-dom";
 import Alert from '../../Components/Alert.js'
-import logiciels from '../../infos_logiciels.json';
+import logiciels_fr from '../../languages/fr/infos_logiciels.fr.json';
+import logiciels_en from '../../languages/en/infos_logiciels.en.json';
+import logiciels_ar from '../../languages/ar/infos_logiciels.ar.json';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 export default function Home() {
     const [showTitle, setShowTitle] = useState(false)
@@ -14,6 +17,23 @@ export default function Home() {
     const updateDimensions = () => {
         setHeight(window.innerHeight);
     }
+
+    //Language of the softwares
+    const intl = useIntl();
+    let logiciels;
+    const language = intl.locale;
+
+    if (language === "fr-FR") {
+        logiciels = logiciels_fr
+    }
+    if (language === "en-US") {
+        logiciels = logiciels_en
+    }
+    if (language === "ar-001") {
+        logiciels = logiciels_ar
+    }
+
+
 
     useEffect(() => {
         window.addEventListener("resize", updateDimensions);
@@ -101,14 +121,18 @@ export default function Home() {
             <div className={classes.background}>
                 <br />
                 <Zoom right cascade collapse when={showTitle}>
-                    <h1 className="title">Progiciel de gestion integré J-PRO ERP</h1>
+                    <h1 className="title">
+                        <FormattedMessage
+                            id="homepage.title"
+                            defaultMessage="Progiciel de gestion integré J-PRO ERP"
+                        />
+                    </h1>
                 </Zoom>
             </div>
             <div id="scrollTo">
                 <div className={classes.background2}>
                     <div className={classes.background2After}></div>
                     {logiciels.map((logiciel, index) => {
-                        console.log(index, logiciel.name)
                         if (index % 2 === 0)
                             return <Fade right><LogicielCard key={index} logiciel={logiciel} /></Fade>
                         else

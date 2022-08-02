@@ -3,7 +3,7 @@ import Main from './Pages/Home/Home';
 import Contact from './Pages/contact/Form.Contact';
 import Client from './Pages/contact-client/Form.Client';
 import Revendeur from './Pages/contact-revendeur/Form.Revendeur';
-import NotFoundView from './Components/NotFoundView';
+import NotFoundView from './Pages/404NotFound/NotFound';
 import Logiciel from './Pages/Logiciel/Logiciel';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ScrollToTop from './Components/ScrollToTop';
