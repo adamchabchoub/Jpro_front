@@ -4,14 +4,17 @@ import AvantageCard from '../../Components/AvantageCard';
 import { makeStyles } from '@material-ui/core/styles';
 import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
-import { Button } from '@material-ui/core';
+import { Button, Typography } from '@material-ui/core';
 import logicielImg from './logiciel.png';
 
 const useStyles = makeStyles({
     topContainer: {
         height: "70vh",
-        width: "100%",
+        maxWidth: "100%",
         backgroundColor: "#020611"
+
+
+
     },
     imageContainer: {
         backgroundImage: `url(${logicielImg})`,
@@ -20,20 +23,36 @@ const useStyles = makeStyles({
         height: "80vh",
         position: "absolute",
         top: "12vh",
-        right: "0vw"
+        right: "0vw",
+        '@media(max-width: 810px)': {
+            display: "none"
+        }
     },
     title: {
         color: "white",
-        marginTop: "16vh",
-        fontSize: "60px",
-        marginLeft: "14vw"
+        marginTop: "10vh",
+        fontSize: "50px",
+        marginLeft: "14vw",
+
+
+
+        '@media(max-width: 810px)': {
+            marginTop: "5vh",
+            display: "block"
+
+        }
     },
     button: {
         color: 'white',
         backgroundColor: '#0451e1',
         marginLeft: "14vw",
-        marginTop: "-32vh",
+        marginTop: "15vh",
         fontSize: "20px",
+        '@media(max-width: 810px)': {
+            maxWidth: "100rem",
+            display: 'block',
+            marginRight: "50px"
+        }
     },
     secondContainer: {
         backgroundColor: "#F2F5F6",
@@ -70,8 +89,8 @@ export default function Logiciel() {
         <div>
             <div className={classes.topContainer}>
                 <div style={{ paddingTop: "10vh" }}>
-                    <Zoom right cascade collapse className={{ marginTop: "16vh", }}>
-                        <h1 className={classes.title}>Logiciel Comptabilité</h1>
+                    <Zoom right cascade collapse className={{ marginTop: "16vh", display: "flex", flexDirection: "center" }}>
+                        <Typography className={classes.title}>Logiciel comptabilité </Typography>
                         <Button className={classes.button} variant="contained" color="primary">Réservez votre logiciel Dès maintenant!</Button>
                     </Zoom>
                 </div>

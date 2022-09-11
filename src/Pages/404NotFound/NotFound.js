@@ -4,6 +4,8 @@ import {
   Container,
   Typography,
 } from '@material-ui/core';
+import { FormattedMessage } from 'react-intl';
+
 
 
 const NotFoundView = () => {
@@ -14,6 +16,7 @@ const NotFoundView = () => {
       flexDirection="column"
       height="100%"
       justifyContent="center"
+      paddingTop="70px"
     >
       <Container maxWidth="md">
         <Typography
@@ -21,16 +24,17 @@ const NotFoundView = () => {
           color="textPrimary"
           variant="h1"
         >
-          404: The page you are looking for isn’t here
-          </Typography>
+
+          <FormattedMessage id="notfound1" defaultMessage=" 404: La page que vous recherchez n'est pas ici"></FormattedMessage>
+        </Typography>
         <Typography
           align="center"
           color="textPrimary"
           variant="subtitle2"
         >
-          You either tried some shady route or you came here by mistake.
-          Whichever it is, try using the navigation
-          </Typography>
+          <FormattedMessage id="notfound2" defaultMessage="Soit vous avez essayé une route louche, soit vous êtes venu ici par erreur. Quoi qu'il en soit, essayez d'utiliser la navigation"></FormattedMessage>
+
+        </Typography>
       </Container>
     </Box>
   );

@@ -4,6 +4,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { useMediaQuery } from 'react-responsive';
 import businessMeeting from './BusinessMeeting.jpeg';
+import { FormattedMessage } from 'react-intl';
 
 
 const Desktop = ({ children }) => {
@@ -73,13 +74,13 @@ export default function Contact() {
         </div>
         <br />
         <div className={classes.formContainer} style={{ width: "45vw" }}>
-          <h1 className={classes.title} style={{ fontSize: "3.5vw" }}>Contactez nous</h1>
+          <h1 className={classes.title} style={{ fontSize: "3.5vw" }}><FormattedMessage id="contact" defaultMessage="Contactez nous" /></h1>
           <form>
             <div className="form-row">
 
               <TextField
                 id="outlined-secondary"
-                label="Nom et Prénom"
+                label={<FormattedMessage id="nomprenom" defaultMessage="nom et prénom" />}
                 variant="outlined"
                 color="primary"
                 className={classes.formTextField}
@@ -90,7 +91,7 @@ export default function Contact() {
             <div className="form-row">
               <TextField
                 id="outlined-secondary"
-                label="Nom de la société"
+                label={<FormattedMessage id="nomsociete" defaultMessage="nom de la société" />}
                 variant="outlined"
                 color="primary"
                 className={classes.formTextField}
@@ -100,7 +101,7 @@ export default function Contact() {
             <div className="form-row">
               <TextField
                 id="outlined-secondary"
-                label="Email"
+                label={<FormattedMessage id="email" defaultMessage="email" />}
                 variant="outlined"
                 color="primary"
                 className={classes.formTextField}
@@ -111,7 +112,7 @@ export default function Contact() {
             <div className="form-row">
               <TextField
                 id="outlined-secondary"
-                label="Téléphone"
+                label={<FormattedMessage id="tel" defaultMessage="téléphone" />}
                 variant="outlined"
                 color="primary"
                 className={classes.formTextField}
@@ -121,7 +122,7 @@ export default function Contact() {
             <div className="form-row">
               <TextField
                 id="outlined-multiline-static"
-                label=" Décrire Votre Besoin"
+                label={<FormattedMessage id="desc" defaultMessage="Décrire votre besoin" />}
                 multiline
                 rows={4}
                 variant="outlined"
@@ -135,7 +136,7 @@ export default function Contact() {
                 color="primary"
                 className={classes.button}
               >
-                Envoyer
+                {<FormattedMessage id="envoyer" defaultMessage="envoyer" />}
               </Button>
             </div>
           </form>
@@ -148,12 +149,12 @@ export default function Contact() {
         </div>
         <br />
         <div className={classes.formContainer} style={{ width: "70vw" }}>
-          <h1 className={classes.title} style={{ fontSize: "3.8vw" }}>Contactez nous</h1>
+          <h1 className={classes.title} style={{ fontSize: "3.8vw" }}><FormattedMessage id="contact" defaultMessage="Contactez nous" /></h1>
           <form>
             <div className="form-row">
               <TextField
                 id="outlined-secondary"
-                label="Nom et Prénom"
+                label={<FormattedMessage id="nomprenom" defaultMessage="nom et prénom" />}
                 variant="outlined"
                 color="primary"
                 className={classes.formTextField}
@@ -163,7 +164,7 @@ export default function Contact() {
             <div className="form-row">
               <TextField
                 id="outlined-secondary"
-                label="Nom de la société"
+                label={<FormattedMessage id="nomsociete" defaultMessage="nom de la société" />}
                 variant="outlined"
                 color="primary"
                 className={classes.formTextField}
@@ -173,7 +174,7 @@ export default function Contact() {
             <div className="form-row">
               <TextField
                 id="outlined-secondary"
-                label="Email"
+                label={<FormattedMessage id="email" defaultMessage="email" />}
                 variant="outlined"
                 color="primary"
                 className={classes.formTextField}
@@ -183,7 +184,7 @@ export default function Contact() {
             <div className="form-row">
               <TextField
                 id="outlined-secondary"
-                label="Téléphone"
+                label={<FormattedMessage id="tel" defaultMessage="téléphone" />}
                 variant="outlined"
                 color="primary"
                 className={classes.formTextField}
@@ -193,7 +194,7 @@ export default function Contact() {
             <div className="form-row">
               <TextField
                 id="outlined-multiline-static"
-                label=" Décrire Votre Besoin"
+                label={<FormattedMessage id="desc" defaultMessage="Décrire votre besoin" />}
                 multiline
                 rows={4}
                 variant="outlined"
@@ -207,7 +208,7 @@ export default function Contact() {
                 color="primary"
                 className={classes.button}
               >
-                Envoyer
+                {<FormattedMessage id="envoyer" defaultMessage="envoyer" />}
               </Button>
             </div>
           </form>
@@ -220,12 +221,12 @@ export default function Contact() {
         </div>
         <br />
         <div className={classes.formContainer} style={{ width: "85vw" }}>
-          <h1 className={classes.title} style={{ fontSize: "4.8vw" }}>Contactez nous</h1>
+          <h1 className={classes.title} style={{ fontSize: "4.8vw" }}><FormattedMessage id="contact" defaultMessage="Contactez nous" /></h1>
           <form>
             <div className="form-row">
               <TextField
                 id="outlined-secondary"
-                label="Nom et Prénom"
+                label={<FormattedMessage id="nomprenom" defaultMessage="nom et prénom" />}
                 variant="outlined"
                 color="primary"
                 className={classes.formTextField}
@@ -235,7 +236,7 @@ export default function Contact() {
             <div className="form-row">
               <TextField
                 id="outlined-secondary"
-                label="Nom de la société"
+                label={<FormattedMessage id="nomsociete" defaultMessage="nom de la société" />}
                 variant="outlined"
                 color="primary"
                 className={classes.formTextField}
@@ -245,7 +246,7 @@ export default function Contact() {
             <div className="form-row">
               <TextField
                 id="outlined-secondary"
-                label="Email"
+                label={<FormattedMessage id="email" defaultMessage="email" />}
                 variant="outlined"
                 color="primary"
                 className={classes.formTextField}
@@ -255,7 +256,7 @@ export default function Contact() {
             <div className="form-row">
               <TextField
                 id="outlined-secondary"
-                label="Téléphone"
+                label={<FormattedMessage id="tel" defaultMessage="téléphone" />}
                 variant="outlined"
                 color="primary"
                 className={classes.formTextField}
@@ -265,7 +266,7 @@ export default function Contact() {
             <div className="form-row">
               <TextField
                 id="outlined-multiline-static"
-                label=" Décrire Votre Besoin"
+                label={<FormattedMessage id="desc" defaultMessage="Décrire votre besoin" />}
                 multiline
                 rows={4}
                 variant="outlined"
@@ -279,7 +280,7 @@ export default function Contact() {
                 color="primary"
                 className={classes.button}
               >
-                Envoyer
+                {<FormattedMessage id="envoyer" defaultMessage="envoyer" />}
               </Button>
             </div>
           </form>

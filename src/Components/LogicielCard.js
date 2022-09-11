@@ -8,7 +8,7 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Button } from '@material-ui/core';
-
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     imageContainerLaptop: {
@@ -51,9 +51,10 @@ const useStyles = makeStyles((theme) => ({
         flex: 1,
         flexDirection: "column"
     },
+
     buttonAccordion: {
         marginTop: "5vh",
-        width: "30vw",
+        width: "20vw",
         marginLeft: "auto",
         marginRight: "auto",
         textAlign: "center",
@@ -77,7 +78,7 @@ const Mobile = ({ children }) => {
 export default function Logiciel(props) {
     const classes = useStyles();
 
-    const clickLogiciel =()=>{
+    const clickLogiciel = () => {
         console.log('hi')
     }
 
@@ -93,9 +94,29 @@ export default function Logiciel(props) {
                         />
                     </div>
                     <div className={classes.descriptionContainer}>
-                        <h1 style={{ fontSize: "2.5vw", }}>{props.logiciel.name}</h1>
+                        <Link to={'/test'} className='b'>
+                            <h1 style={{ fontSize: "2.5vw", }}>{props.logiciel.name}</h1>
+                        </Link>
+
+
                         <p className={classes.description}>{props.logiciel.description}</p>
+
+                        <Button
+                            variant="contained"
+
+                            color="primary"
+                            href="/test"
+                            style={{
+                                position: 'absolute',
+                                bottom: '15px',
+                                width: '15vw'
+                            }}
+                        >
+                            J-PRO {props.title}
+                        </Button>
+
                     </div>
+
                 </div>
             </Desktop>
 

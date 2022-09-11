@@ -1,5 +1,5 @@
 .navScroll-enter {
-    background-color:  #020611;
+    background-color: #020611;
     padding-top: 0 !important;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .navScroll-exit-active {
-    background-color:  #020611;
+    background-color: #020611;
     transition: background-color 500ms, padding-top 500ms !important;
     padding-top: 0 !important;
 }
@@ -50,18 +50,28 @@
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    box-shadow: 0 0 10px rgba(33,33,33,.2); 
+    box-shadow: 0 0 10px rgba(33, 33, 33, .2);
     background-color: transparent;
     border: 0;
 }
 
+.b {
+    color: #020611;
+    text-decoration: none;
+}
+
+.b:hover {
+
+    color: #3936e0
+}
+
 .box:hover {
-    box-shadow: 0 0 50px rgba(33,33,33,.2); 
-    color:#3936e0
+    box-shadow: 0 0 50px rgba(33, 33, 33, .2);
+    color: #3936e0
 }
 
 .background2 {
-    position: relative; 
+    position: relative;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -70,7 +80,7 @@
     justify-content: center;
 }
 
-.background2::after {    
+.background2::after {
     content: "";
     background-image: "Assets/SoftwareHome2.jpeg";
     background-size: cover;
@@ -82,4 +92,3 @@
     left: 0px;
     opacity: 0.1;
 }
-

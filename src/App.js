@@ -13,17 +13,18 @@ import Footer from './Components/Footer/Footer';
 function App() {
   return (
     <Router>
-      <Navbar/>
-    <ScrollToTop />
+      <Navbar />
+      <ScrollToTop />
       <Switch>
+
         <Route path="/" exact component={Main} />
         <Route path="/client" component={Client} />
         <Route path="/contact" component={Contact} />
         <Route path="/revendeur" component={Revendeur} />
         <Route path="/test" component={Logiciel} />
-        <Route path="*" component={NotFoundView} />
+        <Route path="/*" component={NotFoundView} />
       </Switch>
-      <Footer/>
+      <Footer />
     </Router>
   );
 }

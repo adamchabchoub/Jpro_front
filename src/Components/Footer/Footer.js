@@ -9,6 +9,7 @@ import YouTubeIcon from '@material-ui/icons/YouTube';
 import { Link as RouterLink } from 'react-router-dom';
 import Link from '@material-ui/core/Link';
 import footerImg from './footer.png';
+import { FormattedMessage } from 'react-intl';
 
 const useStyles = makeStyles({
     container: {
@@ -123,7 +124,8 @@ const useStyles = makeStyles({
     servicesText: {
         color: "white",
         '@media(max-width: 810px)': {
-            fontSize: "22px"
+            fontSize: "22px",
+            paddingRight: "10px"
         }
     },
     productsLinks: {
@@ -143,7 +145,10 @@ export default function Footer() {
             <div className={classes.partWithoutCopyright}>
                 <div className={classes.partOne}>
                     <div className={classes.socialNetworkContainer}>
-                        <h3 className={classes.socialText}>Rejoignez nous!</h3>
+                        <h3 className={classes.socialText}><FormattedMessage
+                            id="footer.title"
+                            defaultMessage="Rejoignez nous!"
+                        /></h3>
                         <IconButton href="https://www.facebook.com/TUNIDEV">
                             <FacebookIcon style={{ fill: "#4267B2" }} />
                         </IconButton>
@@ -160,22 +165,92 @@ export default function Footer() {
                 </div>
                 <div className={classes.partTwoAndThree}>
                     <div className={classes.logiciels}>
-                        <h3 className={classes.productsText}>Logiciels J-PRO</h3>
-                        <Link className={classes.productsLinks} component={RouterLink} to="/">Gestion des ventes</Link>
-                        <Link className={classes.productsLinks} component={RouterLink} to="/">Gestion des achats</Link>
-                        <Link className={classes.productsLinks} component={RouterLink} to="/">Comptabilité</Link>
-                        <Link className={classes.productsLinks} component={RouterLink} to="/">Gestion des stocks</Link>
-                        <Link className={classes.productsLinks} component={RouterLink} to="/">Gestion des ressources humaines</Link>
-                        <Link className={classes.productsLinks} component={RouterLink} to="/">GPAO</Link>
-                        <Link className={classes.productsLinks} component={RouterLink} to="/">Gestion de la paie</Link>
-                        <Link className={classes.productsLinks} component={RouterLink} to="/">Gestion financière</Link>
-                        <Link className={classes.productsLinks} component={RouterLink} to="/">Gestion des immobilistions</Link>
+                        <h3 className={classes.productsText}>
+                            <FormattedMessage
+                                id="jpro.title"
+                                defaultMessage="Progiciel de gestion integré J-PRO ERP"
+                            />
+                        </h3>
+                        <Link className={classes.productsLinks} component={RouterLink} to="/">
+                            <FormattedMessage
+                                id="ventes.footer"
+                                defaultMessage="Gestion des ventes"
+                            />
+                        </Link>
+
+                        <Link className={classes.productsLinks} component={RouterLink} to="/">
+                            <FormattedMessage
+                                id="achats.footer"
+                                defaultMessage="Gestion des achats"
+                            />
+                        </Link>
+                        <Link className={classes.productsLinks} component={RouterLink} to="/">
+                            <FormattedMessage
+                                id="comptabilite.footer"
+                                defaultMessage="Comptabilité"
+                            />
+                        </Link>
+                        <Link className={classes.productsLinks} component={RouterLink} to="/">
+                            <FormattedMessage
+                                id="stocks.footer"
+                                defaultMessage="Gestion des stocks"
+                            />
+                        </Link>
+                        <Link className={classes.productsLinks} component={RouterLink} to="/"><FormattedMessage
+                            id="rh.footer"
+                            defaultMessage="Gestion des ressources humaines"
+                        />
+                        </Link>
+                        <Link className={classes.productsLinks} component={RouterLink} to="/">
+                            <FormattedMessage
+                                id="GPAO.footer"
+                                defaultMessage="GPAO"
+                            />
+                        </Link>
+                        <Link className={classes.productsLinks} component={RouterLink} to="/">
+                            <FormattedMessage
+                                id="paie.footer"
+                                defaultMessage="Gestion de la paie"
+                            />
+                        </Link>
+                        <Link className={classes.productsLinks} component={RouterLink} to="/">
+                            <FormattedMessage
+                                id="finances.footer"
+                                defaultMessage="Gestion financière"
+                            />
+                        </Link>
+                        <Link className={classes.productsLinks} component={RouterLink} to="/">
+                            <FormattedMessage
+                                id="immobilisation.footer"
+                                defaultMessage="Gestion des immobilisations"
+                            />
+                        </Link>
                     </div>
                     <div className={classes.services}>
-                        <h3 className={classes.servicesText}>Services</h3>
-                        <Link className={classes.productsLinks} component={RouterLink} to="/">Assistance</Link>
-                        <Link className={classes.productsLinks} component={RouterLink} to="/">Formation</Link>
-                        <Link className={classes.productsLinks} component={RouterLink} to="/">Conception et mise en place</Link>
+                        <h3 className={classes.servicesText}>
+                            <FormattedMessage
+                                id="service.footer"
+                                defaultMessage="Services"
+                            />
+                        </h3>
+                        <Link className={classes.productsLinks} component={RouterLink} to="/">
+                            <FormattedMessage
+                                id="assistance"
+                                defaultMessage="Assistance"
+                            />
+                        </Link>
+                        <Link className={classes.productsLinks} component={RouterLink} to="/">
+                            <FormattedMessage
+                                id="formation"
+                                defaultMessage="Formation"
+                            />
+                        </Link>
+                        <Link className={classes.productsLinks} component={RouterLink} to="/">
+                            <FormattedMessage
+                                id="conception"
+                                defaultMessage="Conception et mise en place"
+                            />
+                        </Link>
                     </div>
                 </div>
                 <div className={classes.imageContainer}>
@@ -183,7 +258,11 @@ export default function Footer() {
             </div>
             <div className={classes.copyrightContainer}>
                 <CopyrightIcon className={classes.copyrightIcon} style={{ fontSize: 18 }} />
-                <h6 className={classes.copyrightText}>Copyright 2022</h6>
+                <h6 className={classes.copyrightText}>
+                    <FormattedMessage
+                        id="copyrights"
+                        defaultMessage="Copyright 2022"
+                    /></h6>
             </div>
         </div>
     )

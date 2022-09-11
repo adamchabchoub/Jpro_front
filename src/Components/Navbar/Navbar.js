@@ -11,6 +11,7 @@ import '../../App.css';
 import { CSSTransition } from 'react-transition-group';
 import { Link as RouterLink } from 'react-router-dom';
 import { Context } from '../../Components/Wrapper';
+import { FormattedMessage } from 'react-intl';
 
 
 
@@ -100,8 +101,17 @@ export default function Navbar(props) {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      <MenuItem onClick={handleMenuClose}>
+        <FormattedMessage
+          id="profile.navbar"
+          defaultMessage="Profil"
+        /></MenuItem>
+      <MenuItem onClick={handleMenuClose}>
+        <FormattedMessage
+          id="account.navbar"
+          defaultMessage="Mon Compte"
+        />
+      </MenuItem>
     </Menu>
   );
 
@@ -117,13 +127,22 @@ export default function Navbar(props) {
       onClose={handleMobileMenuClose}
     >
       <MenuItem onClick={handleProfileMenuOpen}>
-        <p>Devenir revendeur</p>
+        <p><FormattedMessage
+          id="revendeur.navbar"
+          defaultMessage="Devenir Revendeur"
+        /></p>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
-        <p>Contacter nous</p>
+        <p><FormattedMessage
+          id="contact.navbar"
+          defaultMessage="Contactez Nous"
+        /></p>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
-        <p>A propos</p>
+        <p><FormattedMessage
+          id="apropos.navbar"
+          defaultMessage="à propos"
+        /></p>
       </MenuItem>
     </Menu>
   );
@@ -138,18 +157,34 @@ export default function Navbar(props) {
         >
           <div className="navbar">
             <Toolbar>
-              <Button style={{ color: "white" }} component={RouterLink} to="/">Home</Button>
+              <Button style={{ color: "white" }} component={RouterLink} to="/">
+                <FormattedMessage
+                  id="home-navbar"
+                  defaultMessage="Home" /></Button>
               <div className={classes.sectionDesktopRight}>
-                <Button style={{ color: "white" }} component={RouterLink} to="/revendeur">Revendeur</Button>
-                <Button style={{ color: "white" }} component={RouterLink} to="/contact">Contact</Button>
-                <Button style={{ color: "white" }}>About</Button>
+                <Button style={{ color: "white" }} component={RouterLink} to="/client">
+                  <FormattedMessage
+                    id="client-navbar"
+                    defaultMessage="Client" /></Button>
+                <Button style={{ color: "white" }} component={RouterLink} to="/revendeur">
+                  <FormattedMessage
+                    id="revendeur-navbar"
+                    defaultMessage="Revendeur" /></Button>
+                <Button style={{ color: "white" }} component={RouterLink} to="/contact">
+                  <FormattedMessage
+                    id="contact-navbar"
+                    defaultMessage="Contact" /></Button>
+                <Button style={{ color: "white" }}>
+                  <FormattedMessage
+                    id="about-navbar"
+                    defaultMessage="about" /></Button>
               </div>
               <div className={classes.grow} />
               <select className="languageDropdown" value={context.local} onChange={context.selectLang} defaultValue={currentLanguage}>
-                  <option value="fr-FR"> Français</option>
-                  <option value="en-US">English</option>
-                  <option value="ar-001">العربية</option>
-                </select>
+                <option value="fr-FR"> Français</option>
+                <option value="en-US">English</option>
+                <option value="ar-001">العربية</option>
+              </select>
               <div className={classes.sectionMobile}>
                 <IconButton
                   aria-label="show more"

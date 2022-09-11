@@ -11,6 +11,8 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import { useMediaQuery } from 'react-responsive';
 import businessMeeting from './BusinessMeeting.jpeg';
+import { FormattedMessage } from 'react-intl';
+
 
 
 const Desktop = ({ children }) => {
@@ -101,12 +103,19 @@ export default function Contact() {
                 </div>
                 <br />
                 <div className={classes.formContainer} style={{ width: "45vw" }}>
-                    <h1 className={classes.title} style={{ fontSize: "2.5vw" }}>Bienvenue Client</h1>
+                    <h1 className={classes.title} style={{ fontSize: "2.5vw" }}>
+                        {<FormattedMessage
+                            id="client.title"
+                            defaultMessage="Bienvenue Client"
+                        />}</h1>
                     <form>
                         <div className="form-row">
                             <TextField
                                 id="outlined-secondary"
-                                label="Nom et Prénom"
+                                label={<FormattedMessage
+                                    id="name.client"
+                                    defaultMessage="Nom et Prénom"
+                                />}
                                 variant="outlined"
                                 color="primary"
                                 className={classes.formTextField}
@@ -116,7 +125,10 @@ export default function Contact() {
                         <div className="form-row">
                             <TextField
                                 id="outlined-secondary"
-                                label="Email"
+                                label={<FormattedMessage
+                                    id="email.label"
+                                    defaultMessage="Email"
+                                />}
                                 variant="outlined"
                                 color="primary"
                                 className={classes.formTextField}
@@ -126,7 +138,10 @@ export default function Contact() {
                         <div className="form-row">
                             <TextField
                                 id="outlined-secondary"
-                                label="Téléphone"
+                                label={<FormattedMessage
+                                    id="telephone.label"
+                                    defaultMessage="Téléphone"
+                                />}
                                 variant="outlined"
                                 color="primary"
                                 className={classes.formTextField}
@@ -134,7 +149,10 @@ export default function Contact() {
                             />
                         </div>
                         <FormControl required className={classes.formControl}>
-                            <InputLabel id="demo-simple-select-required-label">Séléctionner Logiciel</InputLabel>
+                            <InputLabel id="demo-simple-select-required-label"><FormattedMessage
+                                id="software.label"
+                                defaultMessage="Séléctionner Logiciel"
+                            /></InputLabel>
                             <Select
                                 labelId="demo-simple-select-required-label"
                                 id="demo-simple-select-required"
@@ -147,30 +165,89 @@ export default function Contact() {
                             //   }}
                             >
                                 <option aria-label="None" value="" />
-                                <option value={1}>Gestion des Acahts</option>
-                                <option value={2}>Gestion des Ventes</option>
-                                <option value={3}>Comptabilité</option>
-                                <option value={4}>GPAO</option>
-                                <option value={5}>Gestion des Stocks</option>
-                                <option value={6}>Gestion des Ressources Humaines</option>
-                                <option value={7}>Gestion Financière</option>
-                                <option value={8}>Gestion des Immobiliers</option>
-                                <option value={9}>Gestion de la paie</option>
+
+
+                                <FormattedMessage id='achats.footer' >
+                                    {(message) => <option value={1}>{message}</option>}
+                                </FormattedMessage>
+                                <FormattedMessage id='ventes.footer' >
+                                    {(message) => <option value={2}>{message}</option>}
+                                </FormattedMessage>
+                                <FormattedMessage id='comptabilite.footer' >
+                                    {(message) => <option value={3}>{message}</option>}
+                                </FormattedMessage>
+                                <FormattedMessage id='GPAO.footer' >
+                                    {(message) => <option value={4}>{message}</option>}
+                                </FormattedMessage>
+                                <FormattedMessage id='stocks.footer' >
+                                    {(message) => <option value={5}>{message}</option>}
+                                </FormattedMessage>
+                                <FormattedMessage id='rh.footer' >
+                                    {(message) => <option value={6}>{message}</option>}
+                                </FormattedMessage>
+                                <FormattedMessage id='finances.footer' >
+                                    {(message) => <option value={7}>{message}</option>}
+                                </FormattedMessage>
+                                <FormattedMessage id='immobilisation.footer' >
+                                    {(message) => <option value={8}>{message}</option>}
+                                </FormattedMessage>
+                                <FormattedMessage id='paie.footer' >
+                                    {(message) => <option value={9}>{message}</option>}
+                                </FormattedMessage>
                             </Select>
-                            <FormHelperText>Required</FormHelperText>
+                            <FormHelperText><FormattedMessage
+                                id="helper"
+                                defaultMessage="Required"
+                            /></FormHelperText>
                         </FormControl>
-                        <p className={classes.besoinTxt}>Votre Besoin?</p>
+                        <p className={classes.besoinTxt}>
+                            <FormattedMessage
+                                id="client.besoin"
+                                defaultMessage="Votre Besoin ?"
+                            /></p>
                         <RadioGroup aria-label="besoin" name="besoin1" value={value} onChange={handleChangeRadio} className={classes.formTextField}
                             style={{ width: "30vw" }}>
-                            <FormControlLabel label="Reporter un problème" control={<Radio color="primary" />} value="problème" />
-                            <FormControlLabel label="Demander l'ajout d'une fonctionalité" control={<Radio color="primary" />} value="fonctionalité" />
-                            <FormControlLabel label="Demander une formation" control={<Radio color="primary" />} value="formation" />
-                            <FormControlLabel label="Demander de l'assistance" control={<Radio color="primary" />} value="assistance" />
+                            <FormControlLabel label={
+                                <FormattedMessage
+                                    id="radiolabel1"
+                                    defaultMessage="Reporter un problème"
+                                />} control={<Radio color="primary" />} value="problème" />
+
+
+                            <FormControlLabel label={
+                                <FormattedMessage
+                                    id="radiolabel2"
+                                    defaultMessage="Demander l'ajout d'une fonctionalité"
+                                />} control={<Radio color="primary" />} value="fonctionalité" />
+
+
+                            <FormControlLabel label={
+                                <FormattedMessage
+                                    id="radiolabel3"
+                                    defaultMessage="Demander une formation"
+                                />} control={<Radio color="primary" />} value="formation" />
+
+
+                            <FormControlLabel label={
+                                <FormattedMessage
+                                    id="radiolabel4"
+                                    defaultMessage="Demander de l'assistance"
+                                />} control={<Radio color="primary" />} value="assistance" />
+
+                            <FormControlLabel label={
+                                <FormattedMessage
+                                    id="radiolabel5"
+                                    defaultMessage="acheter"
+                                />} control={<Radio color="primary" />} value="acheter" />
+
                         </RadioGroup>
                         <div className="form-row">
                             <TextField
                                 id="outlined-multiline-static"
-                                label=" Décrire Votre Besoin"
+                                label={<FormattedMessage
+                                    id="besoin.label"
+                                    defaultMessage="Décrire votre besoin"
+                                />}
                                 multiline
                                 rows={4}
                                 variant="outlined"
@@ -184,7 +261,10 @@ export default function Contact() {
                                 style={{ backgroundColor: "rgba(0,0,100)", color: "white" }}
                                 className={classes.button}
                             >
-                                Envoyer
+                                <FormattedMessage
+                                    id="button.label"
+                                    defaultMessage="Envoyer"
+                                />
                             </Button>
                         </div>
                     </form>
@@ -197,12 +277,19 @@ export default function Contact() {
                 </div>
                 <br />
                 <div className={classes.formContainer} style={{ width: "75vw", }} >
-                    <h1 className={classes.title} style={{ fontSize: "3.8vw" }}>Bienvenue BenJomaa Motors</h1>
+                    <h1 className={classes.title} style={{ fontSize: "3.8vw" }}><FormattedMessage
+                        id="client.title"
+                        defaultMessage="Bienvenue Client"
+                    /></h1>
                     <form>
                         <div className="form-row">
                             <TextField
                                 id="outlined-secondary"
-                                label="Nom et Prénom"
+                                label={
+                                    <FormattedMessage
+                                        id="name.client"
+                                        defaultMessage="Nom et Prénom"
+                                    />}
                                 variant="outlined"
                                 color="primary"
                                 className={classes.formTextField}
@@ -212,7 +299,11 @@ export default function Contact() {
                         <div className="form-row">
                             <TextField
                                 id="outlined-secondary"
-                                label="Email"
+                                label={
+                                    <FormattedMessage
+                                        id="email.label"
+                                        defaultMessage="Email"
+                                    />}
                                 variant="outlined"
                                 color="primary"
                                 className={classes.formTextField}
@@ -222,7 +313,11 @@ export default function Contact() {
                         <div className="form-row">
                             <TextField
                                 id="outlined-secondary"
-                                label="Téléphone"
+                                label={
+                                    <FormattedMessage
+                                        id="telephone.label"
+                                        defaultMessage="Téléphone"
+                                    />}
                                 variant="outlined"
                                 color="primary"
                                 className={classes.formTextField}
@@ -230,7 +325,11 @@ export default function Contact() {
                             />
                         </div>
                         <FormControl required className={classes.formControl}>
-                            <InputLabel id="demo-simple-select-required-label">Séléctionner Logiciel</InputLabel>
+                            <InputLabel id="demo-simple-select-required-label">
+                                <FormattedMessage
+                                    id="software.label"
+                                    defaultMessage="Séléctionner Logiciel"
+                                />  </InputLabel>
                             <Select
                                 labelId="demo-simple-select-required-label"
                                 id="demo-simple-select-required"
@@ -243,31 +342,89 @@ export default function Contact() {
                             //   }}
                             >
                                 <option aria-label="None" value="" />
-                                <option value={1}>Gestion des Acahts</option>
-                                <option value={2}>Gestion des Ventes</option>
-                                <option value={3}>Comptabilité</option>
-                                <option value={4}>GPAO</option>
-                                <option value={5}>Gestion des Stocks</option>
-                                <option value={6}>Gestion des Ressources Humaines</option>
-                                <option value={7}>Gestion Financière</option>
-                                <option value={8}>Gestion des Immobiliers</option>
-                                <option value={9}>Gestion de la paie</option>
+
+
+                                <FormattedMessage id='achats.footer' >
+                                    {(message) => <option value={1}>{message}</option>}
+                                </FormattedMessage>
+                                <FormattedMessage id='ventes.footer' >
+                                    {(message) => <option value={2}>{message}</option>}
+                                </FormattedMessage>
+                                <FormattedMessage id='comptabilite.footer' >
+                                    {(message) => <option value={3}>{message}</option>}
+                                </FormattedMessage>
+                                <FormattedMessage id='GPAO.footer' >
+                                    {(message) => <option value={4}>{message}</option>}
+                                </FormattedMessage>
+                                <FormattedMessage id='stocks.footer' >
+                                    {(message) => <option value={5}>{message}</option>}
+                                </FormattedMessage>
+                                <FormattedMessage id='rh.footer' >
+                                    {(message) => <option value={6}>{message}</option>}
+                                </FormattedMessage>
+                                <FormattedMessage id='finances.footer' >
+                                    {(message) => <option value={7}>{message}</option>}
+                                </FormattedMessage>
+                                <FormattedMessage id='immobilisation.footer' >
+                                    {(message) => <option value={8}>{message}</option>}
+                                </FormattedMessage>
+                                <FormattedMessage id='paie.footer' >
+                                    {(message) => <option value={9}>{message}</option>}
+                                </FormattedMessage>
                             </Select>
-                            <FormHelperText>Required</FormHelperText>
+                            <FormHelperText><FormattedMessage
+                                id="helper"
+                                defaultMessage="Required"
+                            /></FormHelperText>
                         </FormControl>
-                        <p className={classes.besoinTxt}>Votre Besoin?</p>
+                        <p className={classes.besoinTxt}>
+                            <FormattedMessage
+                                id="client.besoin"
+                                defaultMessage="Votre Besoin ?"
+                            /></p>
                         <RadioGroup aria-label="besoin" name="besoin1" value={value} onChange={handleChangeRadio} className={classes.formTextField}
-                            style={{ width: "50vw" }}>
-                            <FormControlLabel label="Reporter un problème" control={<Radio color="primary" />} value="problème" />
-                            <FormControlLabel label="Demander l'ajout d'une fonctionalité" control={<Radio color="primary" />} value="fonctionalité" />
-                            <FormControlLabel label="Demander une formation" control={<Radio color="primary" />} value="formation" />
-                            <FormControlLabel label="Demander de l'assistance" control={<Radio color="primary" />} value="assistance" />
-                            <FormControlLabel label="Acheter" control={<Radio color="primary" />} value="acheter" />
+                            style={{ width: "30vw" }}>
+                            <FormControlLabel label={
+                                <FormattedMessage
+                                    id="radiolabel1"
+                                    defaultMessage="Reporter un problème"
+                                />} control={<Radio color="primary" />} value="problème" />
+
+
+                            <FormControlLabel label={
+                                <FormattedMessage
+                                    id="radiolabel2"
+                                    defaultMessage="Demander l'ajout d'une fonctionalité"
+                                />} control={<Radio color="primary" />} value="fonctionalité" />
+
+
+                            <FormControlLabel label={
+                                <FormattedMessage
+                                    id="radiolabel3"
+                                    defaultMessage="Demander une formation"
+                                />} control={<Radio color="primary" />} value="formation" />
+
+
+                            <FormControlLabel label={
+                                <FormattedMessage
+                                    id="radiolabel4"
+                                    defaultMessage="Demander de l'assistance"
+                                />} control={<Radio color="primary" />} value="assistance" />
+
+                            <FormControlLabel label={
+                                <FormattedMessage
+                                    id="radiolabel5"
+                                    defaultMessage="acheter"
+                                />} control={<Radio color="primary" />} value="acheter" />
                         </RadioGroup>
                         <div className="form-row">
                             <TextField
                                 id="outlined-multiline-static"
-                                label=" Décrire Votre Besoin"
+                                label={
+                                    <FormattedMessage
+                                        id="besoin.label"
+                                        defaultMessage="Décrire votre besoin"
+                                    />}
                                 multiline
                                 rows={4}
                                 variant="outlined"
@@ -281,7 +438,10 @@ export default function Contact() {
                                 style={{ backgroundColor: "rgba(0,0,100)", color: "white" }}
                                 className={classes.button}
                             >
-                                Envoyer
+                                <FormattedMessage
+                                    id="button.label"
+                                    defaultMessage="Envoyer"
+                                />
                             </Button>
                         </div>
                     </form>
@@ -294,12 +454,20 @@ export default function Contact() {
                 </div>
                 <br />
                 <div className={classes.formContainer} style={{ width: "85vw", }} >
-                    <h1 className={classes.title} style={{ fontSize: "4.8vw" }}>Bienvenue BenJomaa Motors</h1>
+                    <h1 className={classes.title} style={{ fontSize: "4.8vw" }}>
+                        <FormattedMessage
+                            id="client.title"
+                            defaultMessage="Bienvenue Client"
+                        /></h1>
                     <form>
                         <div className="form-row">
                             <TextField
                                 id="outlined-secondary"
-                                label="Nom et Prénom"
+                                label={
+                                    <FormattedMessage
+                                        id="name.client"
+                                        defaultMessage="Nom et Prénom"
+                                    />}
                                 variant="outlined"
                                 color="primary"
                                 className={classes.formTextField}
@@ -309,7 +477,11 @@ export default function Contact() {
                         <div className="form-row">
                             <TextField
                                 id="outlined-secondary"
-                                label="Email"
+                                label={
+                                    <FormattedMessage
+                                        id="email.label"
+                                        defaultMessage="Email"
+                                    />}
                                 variant="outlined"
                                 color="primary"
                                 className={classes.formTextField}
@@ -319,7 +491,10 @@ export default function Contact() {
                         <div className="form-row">
                             <TextField
                                 id="outlined-secondary"
-                                label="Téléphone"
+                                label={<FormattedMessage
+                                    id="telephone.label"
+                                    defaultMessage="Téléphone"
+                                />}
                                 variant="outlined"
                                 color="primary"
                                 className={classes.formTextField}
@@ -327,7 +502,12 @@ export default function Contact() {
                             />
                         </div>
                         <FormControl required className={classes.formControl}>
-                            <InputLabel id="demo-simple-select-required-label">Séléctionner Logiciel</InputLabel>
+                            <InputLabel id="demo-simple-select-required-label">
+                                <FormattedMessage
+                                    id="software.label"
+                                    defaultMessage="Séléctionner Logiciel"
+                                />
+                            </InputLabel>
                             <Select
                                 labelId="demo-simple-select-required-label"
                                 id="demo-simple-select-required"
@@ -340,31 +520,89 @@ export default function Contact() {
                             //   }}
                             >
                                 <option aria-label="None" value="" />
-                                <option value={1}>Gestion des Acahts</option>
-                                <option value={2}>Gestion des Ventes</option>
-                                <option value={3}>Comptabilité</option>
-                                <option value={4}>GPAO</option>
-                                <option value={5}>Gestion des Stocks</option>
-                                <option value={6}>Gestion des Ressources Humaines</option>
-                                <option value={7}>Gestion Financière</option>
-                                <option value={8}>Gestion des Immobiliers</option>
-                                <option value={9}>Gestion de la paie</option>
+                                <FormattedMessage id='achats.footer' >
+                                    {(message) => <option value={1}>{message}</option>}
+                                </FormattedMessage>
+                                <FormattedMessage id='ventes.footer' >
+                                    {(message) => <option value={2}>{message}</option>}
+                                </FormattedMessage>
+                                <FormattedMessage id='comptabilite.footer' >
+                                    {(message) => <option value={3}>{message}</option>}
+                                </FormattedMessage>
+                                <FormattedMessage id='GPAO.footer' >
+                                    {(message) => <option value={4}>{message}</option>}
+                                </FormattedMessage>
+                                <FormattedMessage id='stocks.footer' >
+                                    {(message) => <option value={5}>{message}</option>}
+                                </FormattedMessage>
+                                <FormattedMessage id='rh.footer' >
+                                    {(message) => <option value={6}>{message}</option>}
+                                </FormattedMessage>
+                                <FormattedMessage id='finances.footer' >
+                                    {(message) => <option value={7}>{message}</option>}
+                                </FormattedMessage>
+                                <FormattedMessage id='immobilisation.footer' >
+                                    {(message) => <option value={8}>{message}</option>}
+                                </FormattedMessage>
+                                <FormattedMessage id='paie.footer' >
+                                    {(message) => <option value={9}>{message}</option>}
+                                </FormattedMessage>
                             </Select>
-                            <FormHelperText>Required</FormHelperText>
+                            <FormHelperText><FormattedMessage
+                                id="helper"
+                                defaultMessage="Required"
+                            /></FormHelperText>
                         </FormControl>
-                        <p className={classes.besoinTxt}>Votre Besoin?</p>
+                        <p className={classes.besoinTxt}>
+                            <FormattedMessage
+                                id="client.besoin"
+                                defaultMessage="Votre Besoin ?"
+                            />
+                        </p>
                         <RadioGroup aria-label="besoin" name="besoin1" value={value} onChange={handleChangeRadio} className={classes.formTextField}
                             style={{ width: "65vw" }}>
-                            <FormControlLabel label="Reporter un problème" control={<Radio color="primary" />} value="problème" />
-                            <FormControlLabel label="Demander l'ajout d'une fonctionalité" control={<Radio color="primary" />} value="fonctionalité" />
-                            <FormControlLabel label="Demander une formation" control={<Radio color="primary" />} value="formation" />
-                            <FormControlLabel label="Demander de l'assistance" control={<Radio color="primary" />} value="assistance" />
-                            <FormControlLabel label="Acheter" control={<Radio color="primary" />} value="acheter" />
+                            <FormControlLabel label={
+                                <FormattedMessage
+                                    id="radiolabel1"
+                                    defaultMessage="Reporter un problème"
+                                />} control={<Radio color="primary" />} value="problème" />
+
+
+                            <FormControlLabel label={
+                                <FormattedMessage
+                                    id="radiolabel2"
+                                    defaultMessage="Demander l'ajout d'une fonctionalité"
+                                />} control={<Radio color="primary" />} value="fonctionalité" />
+
+
+                            <FormControlLabel label={
+                                <FormattedMessage
+                                    id="radiolabel3"
+                                    defaultMessage="Demander une formation"
+                                />} control={<Radio color="primary" />} value="formation" />
+
+
+                            <FormControlLabel label={
+                                <FormattedMessage
+                                    id="radiolabel4"
+                                    defaultMessage="Demander de l'assistance"
+                                />} control={<Radio color="primary" />} value="assistance" />
+
+                            <FormControlLabel label={
+                                <FormattedMessage
+                                    id="radiolabel5"
+                                    defaultMessage="acheter"
+                                />} control={<Radio color="primary" />} value="acheter" />
+
                         </RadioGroup>
                         <div className="form-row">
                             <TextField
                                 id="outlined-multiline-static"
-                                label=" Décrire Votre Besoin"
+                                label={
+                                    <FormattedMessage
+                                        id="besoin.label"
+                                        defaultMessage="Décrire votre besoin"
+                                    />}
                                 multiline
                                 rows={4}
                                 variant="outlined"
@@ -378,7 +616,10 @@ export default function Contact() {
                                 style={{ backgroundColor: "rgba(0,0,100)", color: "white" }}
                                 className={classes.button}
                             >
-                                Envoyer
+                                <FormattedMessage
+                                    id="button.label"
+                                    defaultMessage="Envoyer"
+                                />
                             </Button>
                         </div>
                     </form>

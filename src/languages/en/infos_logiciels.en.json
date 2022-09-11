@@ -1,62 +1,62 @@
 [
-        {
-            "name":"My name is an english name",
-            "description":"Lorem",
-            "image":"00-Logiciel_de_gestion_intégré_J-PRO_ERP.png"
-        },
-        {
-            "name":"Gestion des achats",
-            "description":"L’entreprise doit s’adapter en permanence à la concurrence, ce qui l’empêche d’augmenter librement les prix de ventes afin de garantir ses marges. Pour Cela, la performance du processus d’achat est généralement l’une des priorités stratégiques de la direction.",
-            "image":"01-Gestion_des_achats.jpg"
-        },
-        {
-            "name":"Gestion des stocks",
-            "description":"Le module J-PRO Gestion des stocks est conçu afin d’offrir une utilisation simple et intuitive tout en assurant une maîtrise et une organisation rigoureuse et efficace de la gestion des stocks.",
-            "image":"02-Gestion_des_stocks.jpeg"
-        },
-        {
-            "name":"Gestion des ventes",
-            "description":"Le Module J-PRO Gestion des ventes est conçu pour automatiser, d’une façon organisée et intuitive, les différentes fonctions liées à la gestion des ventes, de l’établissement du devis jusqu’à la génération de la facture et règlement du client. Ce module, doté de fonctionnalités très riches, est destiné à renforcer l’efficacité des commerciaux dans leurs fonctions opérationnelles et décisionnelles.",
-            "image":"03-Gestion_des_ventes.jpg"
-        },
-        {
-            "name":"GPAO",
-            "description":"Le module J-PRO GPAO, avec sa performance et sa couverture fonctionnelle, est un outil bien placé pour garantir la rigueur et l’efficacité de l’ensemble des activités liées à la gestion du processus de production. Offrant des conditions favorables à l’entreprise pour optimiser l’utilisation de ses ressources, respecter ses délais, minimiser ses coûts de production et maîtriser la traçabilité des matières premières utilisées et des produits finis et semi-finis fabriqués.",
-            "image":"04-GPAO.jpg"
-        },
-        {
-            "name":"Gestion de la paie",
-            "description":"Avec le développement de l’entreprise et l’augmentation de son effectif, un logiciel de paie devient incontournable et obligatoire pour gérer la paie des salariés. Un logiciel de paie professionnel doit traiter les données relatives aux salaires, automatiser les calculs, générer les bulletins de paie et établir des déclarations sociales et fiscales.",
-            "image":"05-Gestion_de_la_paie.jpg"
-        },
-        {
-            "name":"Gestion des ressources humaines",
-            "description":"la gestion de la paie prend en charge l’aspect coût (salaires et aux charges sociales et fiscales liées), alors que le module de gestion du personnel prend en charge l’aspect capital humain qui doit être valorisé et géré de manière optimale. Avec ces deux modules, la gestion du personnel s’inscrit dans un contexte global de stratégie de développement de l’entreprise.",
-            "image":"06-GRH.jpg"
-        },
-        {
-            "name":"Comptabilité",
-            "description":"La comptabilité gérée à l’aide du module J-PRO Comptabilité permet de disposer de toutes les informations concernant les transactions de l’entreprise et la situation de ses comptes. Ce qui lui permet d’avoir une meilleure visibilité sur son activité et l’aide à bien planifier sa stratégie de développement.",
-            "image":"07-Comptabilité.jpg"
-        },
-        {
-            "name":"Gestion des immobilisations",
-            "description":"La gestion des immobilisations traite les informations liées aux actifs immobilisés de l’entreprise : immobilisations incorporelles, corporelles et financières. Le module J-PRO Gestion des immobilisations est destiné à assurer une gestion efficace de l’intégralité de ces actifs durant leur cycle de vie.",
-            "image":"08-Gestion_des_immobilisations.jpg"
-        },
-        {
-            "name":"Gestion financière",
-            "description":"Une bonne gestion des ressources financières est indispensable pour assurer la pérennité de l’entreprise. Pour cela, l’entreprise doit mettre en place des outils cohérents de traitement, de contrôle et de prévision. Le module J-PRO Gestion financière est conçue pour offrir, d’une façon instantanée, une vision détaillée et globale de l’activité de l’entreprise, lui permettant une prise de décision rapide et éclairée.",
-            "image":"09-Gestion_financière.jpg"
-        },
-        {
-            "name":"Calcul des prix de revient",
-            "description":"Lorem",
-            "image":"10-Calcul_des_prix_de_revient.jpg"
-        },
-        {
-            "name":"Transfert et intégration",
-            "description":"Lorem",
-            "image":"11-Transfert_et_intégration.jpg"
-        }
+    {
+        "name": "J-PRO ERP Integrated Management Software",
+        "description": "The J-PRO ERP software allows the management of all operational processes (Workflow), integrating the different management functions of the company. This software is particularly aimed at SMEs wishing to better organize their activities.",
+        "image": "00-Logiciel_de_gestion_intégré_J-PRO_ERP.png"
+    },
+    {
+        "name": "Purchasing Management ",
+        "description": "The company must constantly adapt to competition and optimally fix its sales prices. For this reason, the performance of the purchasing process is generally one of the strategic priorities of management",
+        "image": "01-Gestion_des_achats.jpg"
+    },
+    {
+        "name": "Stock Management ",
+        "description": "The J-PRO Stock management module has been designed to be simple and intuitive to use while ensuring a rigorous and efficient control and organization of stock management. ",
+        "image": "02-Gestion_des_stocks.jpeg"
+    },
+    {
+        "name": "Sales Management ",
+        "description": "The J-PRO Sales Management Module is designed to automate, in an organized and intuitive way, the various functions related to sales management, from the establishment of the estimate to the generation of the invoice and payment of the customer. This module, equipped with very rich functionalities, is intended to reinforce the effectiveness of salespeople in their operational and decision-making functions.",
+        "image": "03-Gestion_des_ventes.jpg"
+    },
+    {
+        "name": "CAPM ",
+        "description": "The J-PRO Computer Aided Production Management “CAPM” module, with its performance, and functional coverage, is a well-placed tool to guarantee the rigor and efficiency of all activities related to the management of the production process",
+        "image": "04-GPAO.jpg"
+    },
+    {
+        "name": "Payroll Management ",
+        "description": "With the development of the company and the increase of its workforce, a payroll software becomes essential to manage the payroll of employees. Professional payroll software must process payroll data, automate calculations, generate pay statements, and prepare social and tax returns.",
+        "image": "05-Gestion_de_la_paie.jpg"
+    },
+    {
+        "name": "Human Resource Management ",
+        "description": "Workforce represents both a cost and an important resource for the company to increase its competitiveness. Thus, payroll management takes care of the cost aspect (salaries and related social and tax charges), while the human resource management module takes care of the human capital aspect which must be valued and managed in an optimal way. With these two modules, the employee management is part of the overall context of the company's development strategy.",
+        "image": "06-GRH.jpg"
+    },
+    {
+        "name": "Accounting",
+        "description": "Accounting managed using the J-PRO Accounting module provides all the information about the company's transactions and the status of its accounts. This allows the company to have a better visibility on its activity and helps it to plan its development strategy. ",
+        "image": "07-Comptabilité.jpg"
+    },
+    {
+        "name": "Asset Management ",
+        "description": "Fixed asset management processes the information related to the company's fixed assets: intangible, tangible, and financial assets.",
+        "image": "08-Gestion_des_immobilisations.jpg"
+    },
+    {
+        "name": "Financial Management ",
+        "description": "Good management of financial resources is essential to ensure the sustainability of the company. To do this, the company must put in place coherent processing, control, and forecasting tools.",
+        "image": "09-Gestion_financière.jpg"
+    },
+    {
+        "name": "Cost Price Calculation ",
+        "description": "The J-PRO Cost price calculation module makes it possible to determine with good precision the cost prices of the products manufactured by the company and to establish the structure of their costs based on all the technical and financial data processed",
+        "image": "10-Calcul_des_prix_de_revient.jpg"
+    },
+    {
+        "name": "Transfer and Integration ",
+        "description": "The J-RPO ERP system focuses on reducing the workload and at the same time eliminating the risk of errors and ensuring the security and authenticity of the information.",
+        "image": "11-Transfert_et_intégration.jpg"
+    }
 ]

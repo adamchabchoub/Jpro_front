@@ -7,6 +7,7 @@ import { useHistory } from 'react-router-dom';
 import * as Yup from 'yup';
 import { Formik } from 'formik';
 import businessMeeting from './BusinessMeeting.jpeg';
+import { FormattedMessage } from 'react-intl';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -112,12 +113,12 @@ export default function Revendeur() {
     activity: '',
     observations: ''
   }
-  
+
   function onSubmit(values) {
     axios.post('http://localhost:5000/candidatRevendeur/add', values)
-    .then((response) => {
+      .then((response) => {
         localStorage.removeItem('countRefreshForAlert');
-        history.push({ pathname: '/', state: { message: 'Formulaire soumis avec succès.'} });
+        history.push({ pathname: '/', state: { message: 'Formulaire soumis avec succès.' } });
       })
       .catch((error) => {
       });
@@ -126,21 +127,30 @@ export default function Revendeur() {
 
   const phoneRegExp = `^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[ ]{0,1}[-s./0-9]*$`;
 
+
   return (
     <div>
       <div className={classes.background2}>
         <div className={classes.background2After}></div>
         <div className={classes.formContainer}>
-          <h1 className={classes.title}>Devenir Revendeur</h1>
+          <h1 className={classes.title}>
+            <FormattedMessage id="dealer.title" defaultMessage="Devenir Revendeur" /></h1>
           <Formik
             {...{ initialValues, onSubmit }}
             validationSchema={
               Yup.object().shape({
-                nomSociete: Yup.string().required(),
-                email: Yup.string().email('Must be a valid email').max(255).required('Email is required'),
-                telephone: Yup.string().matches(phoneRegExp, 'Must be a valid phone number').required("Phone number is required"),
+                nomSociete: Yup.string().required(
+                  <FormattedMessage id="societe.requirement" defaultMessage="nom societe requis" />),
+                email: Yup.string().email(
+                  <FormattedMessage id="email.validation" defaultMessage="email doit être valide " />)
+                  .max(255).required(
+                    <FormattedMessage id="email.requirement" defaultMessage="email requis" />),
+                telephone: Yup.string().matches(phoneRegExp, {
+                  message: <FormattedMessage id="phone.validation" defaultMessage="téléphone doit être valide "
+                  />
+                }).required(<FormattedMessage id="phone.requirement" defaultMessage="téléphone requis" />),
                 address: Yup.string(),
-                contact: Yup.string().required('Contact is required'),
+                contact: Yup.string().required(<FormattedMessage id="contact.requirement" defaultMessage="contact requis" />),
                 activity: Yup.string(),
                 observations: Yup.string(),
               })
@@ -160,7 +170,7 @@ export default function Revendeur() {
                 <div className="form-row">
                   <TextField
                     id="outlined-secondary"
-                    label="Nom / Raison Sociale"
+                    label={<FormattedMessage id="nomsociete.label" defaultMessage="Nom / Raison sociale" />}
                     variant="outlined"
                     error={Boolean(touched.nomSociete && errors.nomSociete)}
                     helperText={touched.nomSociete && errors.nomSociete}
@@ -175,7 +185,7 @@ export default function Revendeur() {
                 <div className="form-row">
                   <TextField
                     id="outlined-secondary"
-                    label="Personne à contacter"
+                    label={<FormattedMessage id="contact.label" defaultMessage="Personne à contacter" />}
                     variant="outlined"
                     error={Boolean(touched.contact && errors.contact)}
                     helperText={touched.contact && errors.contact}
@@ -192,7 +202,7 @@ export default function Revendeur() {
                 <div className="form-row">
                   <TextField
                     id="outlined-secondary"
-                    label="Adresse"
+                    label={<FormattedMessage id="adress.label" defaultMessage="Adresse" />}
                     variant="outlined"
                     error={Boolean(touched.address && errors.address)}
                     helperText={touched.address && errors.address}
@@ -207,7 +217,7 @@ export default function Revendeur() {
                 <div className="form-row">
                   <TextField
                     id="outlined-secondary"
-                    label="Téléphone"
+                    label={<FormattedMessage id="telephone.label" defaultMessage="Téléphone" />}
                     variant="outlined"
                     error={Boolean(touched.telephone && errors.telephone)}
                     helperText={touched.telephone && errors.telephone}
@@ -222,7 +232,7 @@ export default function Revendeur() {
                 <div className="form-row">
                   <TextField
                     id="outlined-secondary"
-                    label="Email"
+                    label={<FormattedMessage id="email.label" defaultMessage="Email" />}
                     variant="outlined"
                     error={Boolean(touched.email && errors.email)}
                     helperText={touched.email && errors.email}
@@ -237,7 +247,7 @@ export default function Revendeur() {
                 <div className="form-row">
                   <TextField
                     id="outlined-secondary"
-                    label="Activité"
+                    label={<FormattedMessage id="activity.label" defaultMessage="Activité" />}
                     variant="outlined"
                     error={Boolean(touched.activity && errors.activity)}
                     helperText={touched.activity && errors.activity}
@@ -252,7 +262,7 @@ export default function Revendeur() {
                 <div className="form-row">
                   <TextField
                     id="outlined-secondary"
-                    label="Observations"
+                    label={<FormattedMessage id="observations.label" defaultMessage="Observations" />}
                     variant="outlined"
                     error={Boolean(touched.observations && errors.observations)}
                     helperText={touched.observations && errors.observations}
@@ -272,14 +282,14 @@ export default function Revendeur() {
                     type="submit"
                     disabled={isSubmitting}
                   >
-                    Envoyer
-              </Button>
+                    {<FormattedMessage id="button.label" defaultMessage="Envoyer" />}
+                  </Button>
                 </div>
               </form>
             )}
           </Formik>
         </div>
       </div>
-    </div>
+    </div >
   )
 }

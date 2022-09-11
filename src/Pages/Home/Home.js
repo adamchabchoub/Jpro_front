@@ -11,6 +11,9 @@ import logiciels_en from '../../languages/en/infos_logiciels.en.json';
 import logiciels_ar from '../../languages/ar/infos_logiciels.ar.json';
 import { FormattedMessage, useIntl } from 'react-intl';
 
+
+
+
 export default function Home() {
     const [showTitle, setShowTitle] = useState(false)
     const [height, setHeight] = useState(window.innerHeight);
@@ -132,7 +135,8 @@ export default function Home() {
             <div id="scrollTo">
                 <div className={classes.background2}>
                     <div className={classes.background2After}></div>
-                    {logiciels.map((logiciel, index) => {
+
+                    {logiciels?.map((logiciel, index) => {
                         if (index % 2 === 0)
                             return <Fade right><LogicielCard key={index} logiciel={logiciel} /></Fade>
                         else
@@ -141,7 +145,6 @@ export default function Home() {
                     }
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
-
