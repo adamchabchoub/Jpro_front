@@ -1,0 +1,29 @@
+[
+    {
+        "id": "accounting",
+        "title": "Accounting ",
+        "subtitle": " Better visibility of the company",
+        "description": "Accounting is often perceived as a legal obligation, yet it is one of the main factors in the sound management of a company. Accounting managed using the J-PRO Accounting module provides all the information about the company's transactions and the status of its accounts. This allows the company to have a better visibility on its activity and helps it to plan its development strategy. The J-PRO Accounting Module is a multi-company application, perfectly adapted to SMEs and accounting firms.",
+        "image1": "accounting1.png",
+        "image2": "accounting2.png",
+        "image3": "accounting3.png"
+    },
+    {
+        "id": "purchasing",
+        "title": "Purchasing Management",
+        "subtitle": "Efficient purchasing process adapted to the competition",
+        "description": "The company must constantly adapt to competition and optimally fix its sales prices. For this reason, the performance of the purchasing process is generally one of the strategic priorities of management. with the help of the J-PRO Purchasing management module ,employees will perform tasks related to the management of purchasing operations in a much faster and more efficient manner and will be able to take advantage of the time saved to focus on the company's core business and concentrate on other tasks with higher added value.",
+        "image1": "purchasing1.jpg",
+        "image2": "purchasing2.jpg",
+        "image3": "purchasing3.jpg"
+    },
+    {
+        "id": "human-resources",
+        "title": "Human Resources Management ",
+        "subtitle": "Holiday mangament adapted to your structure",
+        "description": "Workforce represents both a cost and an important resource for the company to increase its competitiveness. Thus, payroll management takes care of the cost aspect (salaries and related social and tax charges), while the human resource management module takes care of the human capital aspect which must be valued and managed in an optimal way. With these two modules, the employee management is part of the overall context of the company&#39;s development strategy. The J-PRO Human Resource Management module is designed to help users manage daily and strategic activities ",
+        "image1": "hr1.jpg",
+        "image2": "hr2.jpg",
+        "image3": "hr3.jpg"
+    }
+]

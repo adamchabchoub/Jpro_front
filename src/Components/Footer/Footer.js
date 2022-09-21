@@ -178,13 +178,13 @@ export default function Footer() {
                             />
                         </Link>
 
-                        <Link className={classes.productsLinks} component={RouterLink} to="/">
+                        <Link className={classes.productsLinks} component={RouterLink} to="/logiciel/purchasing">
                             <FormattedMessage
                                 id="achats.footer"
                                 defaultMessage="Gestion des achats"
                             />
                         </Link>
-                        <Link className={classes.productsLinks} component={RouterLink} to="/">
+                        <Link className={classes.productsLinks} component={RouterLink} to="/logiciel/accounting">
                             <FormattedMessage
                                 id="comptabilite.footer"
                                 defaultMessage="Comptabilité"
@@ -196,7 +196,7 @@ export default function Footer() {
                                 defaultMessage="Gestion des stocks"
                             />
                         </Link>
-                        <Link className={classes.productsLinks} component={RouterLink} to="/"><FormattedMessage
+                        <Link className={classes.productsLinks} component={RouterLink} to="/logiciel/human-resources"><FormattedMessage
                             id="rh.footer"
                             defaultMessage="Gestion des ressources humaines"
                         />

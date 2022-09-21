@@ -7,7 +7,8 @@
     {
         "name": "Gestion des achats",
         "description": "L’entreprise doit s’adapter en permanence à la concurrence, ce qui l’empêche d’augmenter librement les prix de ventes afin de garantir ses marges. Pour Cela, la performance du processus d’achat est généralement l’une des priorités stratégiques de la direction.",
-        "image": "01-Gestion_des_achats.jpg"
+        "image": "01-Gestion_des_achats.jpg",
+        "id": "purchasing"
     },
     {
         "name": "Gestion des stocks",
@@ -32,12 +33,14 @@
     {
         "name": "Gestion des ressources humaines",
         "description": "la gestion de la paie prend en charge l’aspect coût (salaires et aux charges sociales et fiscales liées), alors que le module de gestion du personnel prend en charge l’aspect capital humain qui doit être valorisé et géré de manière optimale. Avec ces deux modules, la gestion du personnel s’inscrit dans un contexte global de stratégie de développement de l’entreprise.",
-        "image": "06-GRH.jpg"
+        "image": "06-GRH.jpg",
+        "id": "human-resources"
     },
     {
         "name": "Comptabilité",
         "description": "La comptabilité gérée à l’aide du module J-PRO Comptabilité permet de disposer de toutes les informations concernant les transactions de l’entreprise et la situation de ses comptes. Ce qui lui permet d’avoir une meilleure visibilité sur son activité et l’aide à bien planifier sa stratégie de développement.",
-        "image": "07-Comptabilité.jpg"
+        "image": "07-Comptabilité.jpg",
+        "id": "accounting"
     },
     {
         "name": "Gestion des immobilisations",

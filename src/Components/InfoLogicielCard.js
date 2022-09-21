@@ -3,11 +3,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import Image from 'material-ui-image';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
-import AspectRatioIcon from '@material-ui/icons/AspectRatio';
-import IconButton from '@material-ui/core/IconButton';
+
 
 
 export default function InfoLogicielCard(props) {
@@ -16,7 +14,7 @@ export default function InfoLogicielCard(props) {
             height: "50vh",
             marginTop: "20vh",
             marginBottom: "22vh",
-            maxWidth: "85vw",
+            maxWidth: "200vw",
             marginLeft: "auto",
             marginRight: "auto",
             boxShadow: "0 0 0px rgba(33,33,33,.2)",
@@ -38,18 +36,18 @@ export default function InfoLogicielCard(props) {
             },
         },
         textContainer: {
-            maxWidth: "32vw",
+            maxWidth: "50vw",
             marginLeft: `${props.marginLeft}`,
             marginRight: `${props.marginRight}`,
             '@media(max-width: 1150px)': {
                 width: "80vw",
-                marginLeft:0,
-                marginRight:0
+                marginLeft: 0,
+                marginRight: 0
             },
             '@media(max-height: 600px)': {
                 width: "80vw",
-                marginLeft:0,
-                marginRight:0
+                marginLeft: 0,
+                marginRight: 0
 
             },
         },
@@ -64,6 +62,7 @@ export default function InfoLogicielCard(props) {
             },
         },
         description: {
+            fontSize: "25px",
             '@media(max-width: 1150px)': {
                 width: "80vw",
             },
@@ -83,23 +82,13 @@ export default function InfoLogicielCard(props) {
                     onCloseRequest={() => setIsOpen(false)}
                 />
             )}
-            <CardContent className={classes.content}>
-                <Image src={props.image}
-                    style={{ width: "100%", position: 'sticky', height: "auto", }}
-                    imageStyle={{ width: 'inherit', height: 'inherit' }}
-                    color="transparent"
-
-                />
+            <CardContent className={classes.content}  >
                 <div className={classes.textContainer}>
                     <div className={classes.titleAndIconContainer}>
                         <Typography variant="h4" component="h2" className={classes.title}>
                             {props.title}
                         </Typography>
-                        <IconButton
-                            onClick={() => setIsOpen(true)}
-                        >
-                            <AspectRatioIcon />
-                        </IconButton>
+
                     </div>
                     <Typography variant="body1" color="textSecondary" className={classes.description}>
                         {props.description}

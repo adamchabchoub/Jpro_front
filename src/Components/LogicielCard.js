@@ -7,7 +7,6 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import { Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
@@ -52,19 +51,6 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: "column"
     },
 
-    buttonAccordion: {
-        marginTop: "5vh",
-        width: "20vw",
-        marginLeft: "auto",
-        marginRight: "auto",
-        textAlign: "center",
-        '@media(max-width: 770px)': {
-            width: "40vw"
-        },
-        '@media(max-width: 510px)': {
-            width: "60vw"
-        },
-    }
 }))
 
 const Desktop = ({ children }) => {
@@ -94,26 +80,14 @@ export default function Logiciel(props) {
                         />
                     </div>
                     <div className={classes.descriptionContainer}>
-                        <Link to={'/test'} className='b'>
+                        <Link to={`/logiciel/${props.logiciel.id}`} className='b'>
                             <h1 style={{ fontSize: "2.5vw", }}>{props.logiciel.name}</h1>
                         </Link>
 
 
                         <p className={classes.description}>{props.logiciel.description}</p>
 
-                        <Button
-                            variant="contained"
 
-                            color="primary"
-                            href="/test"
-                            style={{
-                                position: 'absolute',
-                                bottom: '15px',
-                                width: '15vw'
-                            }}
-                        >
-                            J-PRO {props.title}
-                        </Button>
 
                     </div>
 
@@ -139,14 +113,7 @@ export default function Logiciel(props) {
                                 color="transparent"
                             />
                         </div>
-                        <Button
-                            variant="contained"
-                            color="primary"
-                            href="/test"
-                            className={classes.buttonAccordion}
-                        >
-                            J-PRO {props.title}
-                        </Button>
+
                     </AccordionDetails>
                 </Accordion>
             </Mobile>

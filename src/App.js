@@ -21,7 +21,7 @@ function App() {
         <Route path="/client" component={Client} />
         <Route path="/contact" component={Contact} />
         <Route path="/revendeur" component={Revendeur} />
-        <Route path="/test" component={Logiciel} />
+        <Route path="/logiciel/:id" component={Logiciel} />
         <Route path="/*" component={NotFoundView} />
       </Switch>
       <Footer />

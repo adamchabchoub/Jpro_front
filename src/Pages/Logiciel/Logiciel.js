@@ -4,8 +4,12 @@ import AvantageCard from '../../Components/AvantageCard';
 import { makeStyles } from '@material-ui/core/styles';
 import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
-import { Button, Typography } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
 import logicielImg from './logiciel.png';
+import softwares_en from './softwares-en.json';
+import softwares_fr from './softwares.json';
+import softwares_ar from './softwares-ar.json';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 const useStyles = makeStyles({
     topContainer: {
@@ -82,31 +86,51 @@ const useStyles = makeStyles({
         }
     }
 })
-export default function Logiciel() {
+export default function Logiciel(props) {
     const classes = useStyles();
+
+    const intl = useIntl();
+    let softwares;
+    const language = intl.locale;
+
+    if (language === "fr-FR") {
+        softwares = softwares_fr
+    }
+    if (language === "en-US") {
+        softwares = softwares_en
+    }
+    if (language === "ar-001") {
+        softwares = softwares_ar
+    }
+
+
 
     return (
         <div>
-            <div className={classes.topContainer}>
-                <div style={{ paddingTop: "10vh" }}>
-                    <Zoom right cascade collapse className={{ marginTop: "16vh", display: "flex", flexDirection: "center" }}>
-                        <Typography className={classes.title}>Logiciel comptabilité </Typography>
-                        <Button className={classes.button} variant="contained" color="primary">Réservez votre logiciel Dès maintenant!</Button>
-                    </Zoom>
-                </div>
-                <div className={classes.imageContainer} />
-            </div>
-            <Fade>
-                <InfoLogicielCard
-                    flexDirection="row"
-                    marginLeft="10vw"
-                    marginRight="0"
-                    image="Assets/capture.png"
-                    title="Une gestion des congés adaptée à votre structure"
-                    description="Besoin de simplifier, automatiser vos processus RH et dématérialiser les données de vos salariés ? Sage Espace Employés vous permet rapidement le suivi et la gestion des congés et absences de vos salariés, de la demande de congés, jusqu’à l’envoi des données en paye pour la préparation des bulletins de salaire."
-                />
-            </Fade>
-            {/* <Fade>
+            {softwares?.map(data => {
+                if (props.match.params.id === data.id)
+                    return (<>
+
+                        <div className={classes.topContainer}>
+                            <div style={{ paddingTop: "10vh" }}>
+                                <Zoom right cascade collapse className={{ marginTop: "16vh", display: "flex", flexDirection: "center" }}>
+                                    <Typography className={classes.title}>{data.title} </Typography>
+
+                                </Zoom>
+                            </div>
+                            <div className={classes.imageContainer} />
+                        </div>
+                        <Fade>
+                            <InfoLogicielCard
+                                flexDirection="row"
+                                marginLeft="380px"
+                                image="Assets/capture.png"
+                                title={data.subtitle}
+                                description={data.description}
+
+                            />
+                        </Fade>
+                        {/* <Fade>
                 <InfoLogicielCard
                     flexDirection="row-reverse"
                     marginLeft="0"
@@ -117,7 +141,7 @@ export default function Logiciel() {
                     Vos compteurs et soldes de congés payés, RTT, heures de récupération, absence maladie sont à jour en temps réel. Les contrôles sont automatiquement faits lors de la prise de congés par vos salariés."
                 />
             </Fade> */}
-            {/* <Fade>
+                        {/* <Fade>
                 <InfoLogicielCard
                     flexDirection="row"
                     marginLeft="10vw"
@@ -139,24 +163,26 @@ export default function Logiciel() {
                     Il vous suffit d’exporter en un clic les données de congés et d’absences de Sage Espace Employés vers votre service de paie, interne ou externalisée, vers Sage 100cloud Paie & RH !"
                 />
             </Fade> */}
-            <div className={classes.secondContainer}>
-                <div className={classes.avantageContainer}>
-                    <AvantageCard
-                        title="Rapidité"
-                        description="Ripidité unique!Ripidité unique!Ripidité unique!"
-                        image="https://www.broadbandgenie.co.uk/images/fckImages/stock/connectionspeed_450x300.jpg" />
-                    <AvantageCard
-                        title="Simplicité"
-                        description="Simplicité unique!Simplicité unique!Simplicité unique!Simplicité unique!Simplicité unique!"
-                        image="http://happycoaching.fr/wp-content/uploads/2018/01/simplicit%C3%A9-2-1.jpg"
-                    />
-                    <AvantageCard
-                        title="Puissance"
-                        description="Puissance unique!Puissance unique!Puissance unique!Puissance unique!Puissance unique!Puissance unique!Puissance unique!"
-                        image="https://yt3.ggpht.com/ytc/AAUvwnhDDj07HGlPDUlQPdgjeobT37h8kfZ3gAyn3b0c=s900-c-k-c0x00ffffff-no-rj"
-                    />
-                </div>
-            </div>
-        </div>
-    )
+                        <div className={classes.secondContainer}>
+                            <div className={classes.avantageContainer}>
+                                <AvantageCard
+                                    image={`/Assets/logiciel_cards/${data.image1}`} />
+                                <AvantageCard
+                                    image={`/Assets/logiciel_cards/${data.image2}`} />
+                                <AvantageCard
+                                    image={`/Assets/logiciel_cards/${data.image3}`} />
+                            </div>
+                        </div>
+                    </>
+
+                    )
+            }
+
+
+
+
+            )
+
+            } </div>)
+
 }

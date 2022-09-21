@@ -4,6 +4,7 @@ import French from '../languages/fr/fr.json';
 import English from '../languages/en/en.json';
 import Arabic from '../languages/ar/ar.json';
 
+
 export const Context = React.createContext();
 
 const local = navigator.language;

@@ -1,0 +1,29 @@
+[
+    {
+        "id": "accounting",
+        "title": "Logiciel Comptabilité",
+        "subtitle": "Meilleure visibilité de la société",
+        "description": "La comptabilité est souvent perçue comme une obligation légale, mais elle est pourtant l’un des principaux facteurs d’une gestion saine de l’entreprise. La comptabilité gérée à l’aide du module J-PRO Comptabilité permet de disposer de toutes les informations concernant les transactions de l’entreprise et la situation de ses comptes. Ce qui lui permet d’avoir une meilleure visibilité sur son activité et l’aide à bien planifier sa stratégie de développement. Le Module J-PRO Comptabilité est une application multi-sociétés, parfaitement adaptée aux PME et aux cabinets de comptabilité.",
+        "image1": "accounting1.png",
+        "image2": "accounting2.png",
+        "image3": "accounting3.png"
+    },
+    {
+        "id": "purchasing",
+        "title": "logiciel Gestion des achats",
+        "subtitle": " Processus d'achat performant adaptée à la concurrence",
+        "description": "L’entreprise doit s’adapter en permanence à la concurrence, ce qui l’empêche d’augmenter librement les prix de ventes afin de garantir ses marges. Pour Cela, la performance  du processus d'achat est généralement l’une des priorités stratégiques de la direction. à l'aide du module J-PRO Gestion des achats, les employés réaliseront les tâches liées à la gestion des achats d’une façon beaucoup plus rapide et plus efficace et pourront profiter du temps gagné pour se focaliser sur le cœur du métier de l’entreprise et se concentrer sur d’autres tâches à plus forte valeur ajoutée.",
+        "image1": "purchasing1.jpg",
+        "image2": "purchasing2.jpg",
+        "image3": "purchasing3.jpg"
+    },
+    {
+        "id": "human-resources",
+        "title": "Gestion des ressources humaines",
+        "subtitle": "Une gestion des congés adaptée à votre structure",
+        "description": "Les employés représentent pour l’entreprise à la fois un coût, mais aussi d’importantes ressources pour accroitre sa compétitivité. Ainsi, la gestion de la paie prend en charge l’aspect coût (salaires et aux charges sociales et fiscales liées), alors que le module de gestion du personnel prend en charge l’aspect capital humain qui doit être valorisé et géré de manière optimale. Avec ces deux modules, la gestion du personnel s’inscrit dans un contexte global de stratégie de développement de l’entreprise. Le module J-PRO Gestion des ressources humaines est conçu pour à aider les utilisateurs à gérer les activités et les processus quotidiens et stratégiques",
+        "image1": "hr1.jpg",
+        "image2": "hr2.jpg",
+        "image3": "hr3.jpg"
+    }
+]

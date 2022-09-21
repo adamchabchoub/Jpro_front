@@ -7,7 +7,8 @@
     {
         "name": "Purchasing Management ",
         "description": "The company must constantly adapt to competition and optimally fix its sales prices. For this reason, the performance of the purchasing process is generally one of the strategic priorities of management",
-        "image": "01-Gestion_des_achats.jpg"
+        "image": "01-Gestion_des_achats.jpg",
+        "id": "purchasing"
     },
     {
         "name": "Stock Management ",
@@ -32,12 +33,14 @@
     {
         "name": "Human Resource Management ",
         "description": "Workforce represents both a cost and an important resource for the company to increase its competitiveness. Thus, payroll management takes care of the cost aspect (salaries and related social and tax charges), while the human resource management module takes care of the human capital aspect which must be valued and managed in an optimal way. With these two modules, the employee management is part of the overall context of the company's development strategy.",
-        "image": "06-GRH.jpg"
+        "image": "06-GRH.jpg",
+        "id": "human-resources"
     },
     {
         "name": "Accounting",
         "description": "Accounting managed using the J-PRO Accounting module provides all the information about the company's transactions and the status of its accounts. This allows the company to have a better visibility on its activity and helps it to plan its development strategy. ",
-        "image": "07-Comptabilité.jpg"
+        "image": "07-Comptabilité.jpg",
+        "id": "accounting"
     },
     {
         "name": "Asset Management ",
