@@ -9,7 +9,7 @@ import Lightbox from 'react-image-lightbox';
 
 const useStyles = makeStyles({
     root: {
-        width: "300px",
+        width: "301px",
         marginLeft: "5vw",
         marginRight: "5vw",
     },
